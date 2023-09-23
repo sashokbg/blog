@@ -1,0 +1,16 @@
+.two-col-content {
+    display: flex;
+}
+
+.two-col-content div {
+    margin-right: 1rem;
+}
+
+.portrait {
+    width: 14rem;
+    min-width: 220px;
+}
+
+.ico {
+    width: 1.2rem;
+}
