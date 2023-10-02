@@ -36,7 +36,7 @@ of the two to acquire.
 
 Our organization was very project centric with project managers, tech leads and development teams revolving around
 the idea
-of a project being anything from one month to one year. +
+of a project being anything from one month to one year.
 People could, (and they often did) jump from one to another to fill in missing positions, lend a helpful hand when
 some team was being behind schedule and so on.
 As soon as a project got "lighter" the PMs would reduce the staff and focus on other more urgent clients to optimise
@@ -52,7 +52,7 @@ All of this got me thinking that:
 
 Having a vision and a goal can motivate people and make them believe in the project and also give them a sense of
 accomplishment
-that comes when working on a meaningful and impactful endeavour. +
+that comes when working on a meaningful and impactful endeavour.
 Drawing from my 14 years of experience I would much
 rather
 prefer working with 1 motivated person than to work with 5 apathetic ones.
@@ -74,7 +74,7 @@ The team's motivation also grew thanks to the fact that we worked using Domain D
 Development
 which were both new concepts for the members
 
-Another source of motivation was the way we managed responsibilities: +
+Another source of motivation was the way we managed responsibilities:
 Previously developers at my company participated in classic projects and were used to a very hierarchical structure
 where
 they seldom took any decisions and responsibilities upon themselves.
@@ -97,7 +97,7 @@ into crafters.
 
 ## The downfall
 Everything seemed to be heading in the right direction until the summer vacation period hit us. Many of the team
-members (including me) took long and well deserved august leaves. +
+members (including me) took long and well deserved august leaves.
 I was *shocked* to find out after my return that my whole team has been dismantled and assigned to
 various different projects and tasks.
 We fell victim of the old "project" oriented mindset that treated my colleagues as mere resources and numbers that
@@ -107,14 +107,14 @@ The seeds we have planted have been trampled and the future of our product looks
 
 ## To summarize
 Becoming a software product publisher requires a mindset that is based on vision for what we want to achieve and a
-team that will believe in the common goal and reach it. +
+team that will believe in the common goal and reach it.
 
 Special focus has to be put on the team itself, since culture of hardworking and motivation comes from the
 individuals in the team itself.
 To motivate team members we need to give them new and interesting things to learn, we need to give them
-responsibilities and give them voice. +
+responsibilities and give them voice.
 
 We need to nurture cooperation but also critical point of view. We need to give them a terrain to exercise
-and to make errors. We need to provide a safety net and a helping hand to bring them up when they need it. +
+and to make errors. We need to provide a safety net and a helping hand to bring them up when they need it.
 These are in my opinion the very minimum requirements for a true software publisher to adopt in order to create
 anything meaningful.
