@@ -13,13 +13,13 @@ I found myself explaining how to properly use Git and Gitflow more often than an
 I covered various subjects ranging from "what a good commit message is" and "branch management" to more complicated things like "rebasing". Of course there were also
 the inevitable "Oh Shit Git !" moments where someone would just break something and call for help.
 
-Lacking knowledge, developers on my team would shy away from any advanced feature different from the basic "push / pull" operations.\
+Lacking knowledge, developers on my team would shy away from any advanced feature different from the basic "push / pull" operations. \
 Many of the junior colleagues would even tell me that _rebase_ is actually a *bad* thing, and it should never be used when in fact it is one of the most powerful tools Git posses.[^linus-rant]
 
 Colleagues would often not understand how Git worked and would use GUI (I am looking at you Git Kraken, you did more bad than good in this world !! 😄)
 to simplify their tasks. The problem is however that behind the pretty buttons there is a lot that can happen and many things can go wrong.
-Using a distributed system such as Git and having a large code base comes with an inherent complexity and there is no way around it.\
-Even with a very well-thought UX GUI program like Kraken we can only get thus far and at one point the aid it provides starts working against us. This isn't one of these situations where "there is an easier way to do things" where we just need to "use a better tool".\
+Using a distributed system such as Git and having a large code base comes with an inherent complexity and there is no way around it. \
+Even with a very well-thought UX GUI program like Kraken we can only get thus far and at one point the aid it provides starts working against us. This isn't one of these situations where "there is an easier way to do things" where we just need to "use a better tool". \
 The only way to really master such complex tool like Git and profit from its value is to roll your sleeves and get in the dirt.
 
 ## Getting Dirty

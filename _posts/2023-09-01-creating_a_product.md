@@ -4,9 +4,8 @@ title:  "Creating a Product is Creating a Team"
 date:   2023-09-01 15:38:56 -0500
 categories: informatics
 ---
-# Creating a Product is Creating a Team
 
-## A quick story
+# A quick story
 
 I am one of the lucky people to actually be able to work for a company that tries to create its own software
 solution and become
