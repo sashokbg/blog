@@ -6,6 +6,8 @@ categories: informatics
 ---
 # Our Use Case and Tools
 
+*EDITED* 03/11/2023 Adding PMD suppression explanations.
+
 I have recently decided to try to improve the code base we have been working on for 4 months or so by installing some static code analysis tools. The two main libraries in question are *PMD*[^pmd] and *Checkstyle* - old classics of the Java world that still get regular updates despite their age. \
 Besides those two we also have a more modern testing library called *ArchUnit*[^archunit] to add some architecture rules and guidelines to the project.
 
@@ -42,6 +44,7 @@ This is when I had the idea to just enable all PMD checks and simply count the e
 
 If we do this at the end of each sprint we should in theory be able to progressively activate more and more rules and hence improve quality gradually.
 
+### Maven Config
 I quickly added some maven configuration for the pmd plugin :
 
 1. Adding two pmd config files **pmd-full.xml** with all rules enabled and **pmd.xml** with our current state.
@@ -84,6 +87,24 @@ I quickly added some maven configuration for the pmd plugin :
     ```
 
 1. Now running ```mvn pmd:check -Ppmd-full -pl :project-id``` will run maven with **pmd-full** profile that will load the full pmd check and running with no profile will run the default (current) **pmd.xml**.
+
+### Reactivating Rules
+
+The next step was to start activating the excluded rules one-by-one by fixing whatever we can and ignoring the rest with the annotation:
+
+1. Run pmd for your module
+    ```bash
+    mvn pmd:check -pl :my-module
+    ```
+
+1. Identify a rule that you wish to reactivate
+
+1. Fix as much violations as you while time-boxing yourself to avoid endless refactoring.
+
+1. Suppress the rest with annotations
+    ```
+    @SuppressWarnings("PMD.UnusedLocalVariable")
+    ```
 
 ### Hacking a Script
 Let's add a simple shell script that will clean the output of the command and then do sort and count so we get a nice output:
