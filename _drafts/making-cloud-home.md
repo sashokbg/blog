@@ -11,7 +11,7 @@ categories: informatics
 
 We all have heard of the "cloud", this new promising compute power that provides out-of-the-box solutions and seemingly endless storage and scalability. IT specialists and regular users alike we all have used it in one form or another - streaming services, cloud computing, file storage etc.
 
-Chances are that the "cloud" we all have in mind is related in one way another to a GAFAM company. \
+Chances are that the "cloud" we all have in mind is related in one way another to a {% glossary GAFAM %} company. \
 It almost feels like a marketing stunt that aims at making everyone think about the cloud is something solely and exclusively dedicated to those big corporations. We can easily start think that it is completely out of reach for a private individual to own their own cloud.
 
 Therefor a challenge was born in my mind: gain a bit of independence in such a corporate-ruled world and have a tiny cloud of my own here at home.
@@ -90,7 +90,7 @@ Thankfully there is a great tutorial on Github that explains how to do precisely
 After acquiring all my material and putting everything together here is how the "cloud" looks at home. \
 It takes only the size of a small coffee table top.
 
-![The Home Cloud](/assets/images/homecloud/home_cloud_sm.jpg)
+![The Home Cloud](/assets/images/homecloud/home_cloud.jpg)
 
 ## Taking a Step Back
 

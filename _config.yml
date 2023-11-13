@@ -38,6 +38,7 @@ workplace_name: Proxym.fr
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-glossary_tooltip
 
 # Exclude from processing.
 # The following items will not be processed, by default.

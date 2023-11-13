@@ -1,1 +1,1 @@
-jekyll s
+jekyll s -D
