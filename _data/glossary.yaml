@@ -1,2 +1,11 @@
 - term: GAFAM
   definition: Google, Apple, Facebook, Amazon and Microsoft
+- term: PaaS
+  definition: Platform as a Service
+  url: https://www.redhat.com/en/topics/cloud-computing/what-is-paas
+- term: IaaS
+  definition: Infrastructure as a Service
+  url: https://www.redhat.com/en/topics/cloud-computing/what-is-iaas
+- term: K8s
+  definition: Kubernetes
+  
