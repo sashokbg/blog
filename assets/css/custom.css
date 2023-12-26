@@ -75,3 +75,7 @@
 .jekyll-glossary:hover .jekyll-glossary-tooltip {
     opacity: 1;
 }
+
+.frame {
+    border: 1rem solid gainsboro;
+}

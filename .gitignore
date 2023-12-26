@@ -1,3 +1,5 @@
+*.log
+db
 .idea
 _site
 .sass-cache

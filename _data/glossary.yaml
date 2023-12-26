@@ -8,4 +8,15 @@
   url: https://www.redhat.com/en/topics/cloud-computing/what-is-iaas
 - term: K8s
   definition: Kubernetes
-  
+- term: LLM
+  definition: "Large Language Model (ex: Chat GPT 4 / Llama 2)"
+- term: HF
+  definition: "Hugging Face - a website that is the equivalent to Github but for LLMs"
+  url: "https://huggingface.co/"
+- term: Llama
+  definition: "A lightweight but performant LLM created by Meta / Facebook"
+- term: Prompt Engineering
+  definition: Prompt engineering is the process of structuring text that can be interpreted and understood by a generative AI model.
+- term: Apache 2
+  url: "https://www.apache.org/licenses/LICENSE-2.0"
+  definition: A license providing reliable and long-lived software products through collaborative, open-source software development.
