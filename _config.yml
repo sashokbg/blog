@@ -36,6 +36,13 @@ workplace_name: Proxym.fr
 
 # Build settings
 theme: minima
+
+minima:
+  skin: auto
+
+header_pages:
+  - about.html
+
 plugins:
   - jekyll-feed
   - jekyll-glossary_tooltip

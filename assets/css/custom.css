@@ -41,7 +41,6 @@
     bottom: 100%;
     left: 50%;
     margin-left: -80px; /* Use half of the width to center the tooltip */
-    
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -69,9 +68,18 @@
 /* Animation from invisible to visible on hover. */
 .jekyll-glossary .jekyll-glossary-tooltip {
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
     font-size: 0.75rem;
 }
 .jekyll-glossary:hover .jekyll-glossary-tooltip {
     opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .jekyll-glossary {
+        border-bottom: 2px dotted #0058bd;
+    }
+    .jekyll-glossary .jekyll-glossary-tooltip {
+        background-color: rgb(89, 128, 160);
+    }
 }

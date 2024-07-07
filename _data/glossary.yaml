@@ -1,3 +1,9 @@
+- term: POC
+  definition: Proof of Concept
+- term: LLM
+  definition: Large Language Model
+- term: ANI
+  definition: Artificial Narrow Intelligence
 - term: GAFAM
   definition: Google, Apple, Facebook, Amazon and Microsoft
 - term: PaaS
