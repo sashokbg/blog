@@ -1,3 +1,7 @@
+- term: POC
+  definition: Proof of Concept
+- term: ANI
+  definition: Artificial Narrow Intelligence
 - term: GAFAM
   definition: Google, Apple, Facebook, Amazon and Microsoft
 - term: PaaS
@@ -9,7 +13,7 @@
 - term: K8s
   definition: Kubernetes
 - term: LLM
-  definition: "Large Language Model (ex: Chat GPT 4 / Llama 2)"
+  definition: "Large Language Model (ex: Chat GPT 4 / Llama 3)"
 - term: HF
   definition: "Hugging Face - a website that is the equivalent to Github but for LLMs"
   url: "https://huggingface.co/"
