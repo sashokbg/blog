@@ -24,3 +24,9 @@
 - term: Apache 2
   url: "https://www.apache.org/licenses/LICENSE-2.0"
   definition: A license providing reliable and long-lived software products through collaborative, open-source software development.
+- term: DDD
+  url: "https://en.wikipedia.org/wiki/Domain-driven_design"
+  definition: Domain Driven Design
+- term: TDD
+  url: "https://en.wikipedia.org/wiki/Test-driven_development"
+  definition: Test Driven Development
