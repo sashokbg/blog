@@ -6,7 +6,9 @@ categories:
   - informatics
 ---
 
-# Studying Domain and Test Driven Design Principles in Frontend Applications
+# Studying Domain\* and Test Driven Design Principles in Frontend Applications
+
+*\* Disclaimer: When talking about DDD in this context I mainly mean the use of an expressive and rich model*.
 
 During my career as web-developer I have noticed a repeating antipattern related to front-end code. For some reason most of the best practices that we usually use on the backend code are rarely applied in the front. This looks especially true for {% glossary DDD %} and {% glossary TDD %} principles.
 
@@ -19,7 +21,7 @@ In our examples _Signals_ can be easily replaced by RxJS or simple callbacks and
 
 ## What is a Model ?
 
-Domain Driven Design is a very vast discipline and I want to mainly focus on the modeling parts of it, such as aggregates, value objects, encapsulation and in general the **model**.
+Domain Driven Design is a very vast discipline and I want to mainly focus on the modeling parts of it, such as aggregates, [value objects](https://en.wikipedia.org/wiki/Value_object), [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) and in general the **model**.
 
 Let's take a moment to talk about what a model is, but also what it is not.
 
@@ -37,7 +39,7 @@ In the celestial model we represent multiple invariants that are observable in r
 - When the Earth completes one revolution around the sun, the Moon completes 12 around the Earth
 - Etc ...
 
-If we represent the solar system by a simple class that only has fields with getters and setters, we would have an anemic model that does not protect its state and does not enforce the invariants mentioned above. \
+If we represent the solar system by a simple class that only has fields with getters and setters, we would have an [anemic model](https://martinfowler.com/bliki/AnemicDomainModel.html) that does not protect its state and does not enforce the invariants mentioned above. \
 Any time we expose a field via a _setter_, we completely neglect the rules of the system and our code becomes error-prone.
 
 As an example, imagine we have the class _SolarSystem_ that has a setter for _Earth_'s position. This means that if an external caller gets a reference to the _SolarSystem_, then nothing stops them from setting the position of our planet to _(0, 0, 0)_ colliding it with the center of the _Sun_. \
@@ -52,8 +54,6 @@ Take a look at the orrery bellow (meaning Model of the solar System) and how it 
 ![](/assets/images/frontend_ddd/model2.gif)
 
 _Credit to [Pinar Noorata and Ken Condal mymodernmet.com](https://mymodernmet.com/author/pinar) for the beautiful orrery._
-
-You can read more on the subject of the anemic domain model antipattern [here](https://martinfowler.com/bliki/AnemicDomainModel.html).
 
 ## Real Life Use Case
 
@@ -147,13 +147,21 @@ Since my model was completely decoupled from React, or any other technical libra
 Most of the fields of my aggregates were private and had no setters, making sure that no data inconsistent operations can be made upon the model.
 
 ```typescript
+/**
+* This class is the main aggregate that manages the description of an Article.
+* It provides operations such as #addChunk, #addStartChunk etc. for adding content to the appropriate blocks.
+*
+* The description comprises multiple LocaleContent.
+*/
 export class DescriptionModel {
   private readonly _languages: LocaleEnum[];
   private readonly _localeContents: Signal<LocaleContent[]>;
   private readonly _currentLocale: Signal<LocaleEnum>;
   private readonly _defaultLocale: LocaleEnum;
   private _run_id = "";
-  isLoading = signal(false);
+  private readonly _isLoading = signal(false);
+  callback: any;
+  
 
   constructor() {
     this._languages = [LocaleEnum.en_US, LocaleEnum.fr_FR, LocaleEnum.en_UK];
@@ -259,12 +267,15 @@ export class DescriptionModel {
   private readonly _defaultLocale: LocaleEnum;
   private _run_id = "";
 }
+```
 
+*Wrapping the model's fields as Signals whenever a component needs to subscribe and react to it changing*
+```typescript
 // to
 export class DescriptionModel {
   private readonly _languages: LocaleEnum[];
-  private readonly _localeContents: Signal<LocaleContent[]>;
-  private readonly _currentLocale: Signal<LocaleEnum>;
+  private readonly _localeContents: Signal<LocaleContent[]>; // <-- wrapped with Signal
+  private readonly _currentLocale: Signal<LocaleEnum>; / <-- wrapped with Signal
   private readonly _defaultLocale: LocaleEnum;
   // ...
 
@@ -272,8 +283,11 @@ export class DescriptionModel {
     return this._localeContents;
   }
 
-  getCurrentLocaleContent(): ReadonlySignal<LocaleContent | undefined> {
-    return this.getLocaleContent(this.currentLocale.value);
+  // Some methods can calculate a Signal's value, based on other signals
+  getLocaleContent(locale: LocaleEnum,): ReadonlySignal<LocaleContent> {
+    return computed(() =>
+      this._localeContents.value.find((loc) => loc.locale === locale),
+    );
   }
   
   // .. etc
