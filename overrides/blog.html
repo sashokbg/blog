@@ -1,0 +1,96 @@
+<!--
+  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<!-- Page content -->
+{% block container %}
+<style>
+  .post-date {
+      color: #828282;
+  }
+</style>
+<div class="md-content" data-md-component="content">
+  <div class="md-content__inner">
+
+    <!-- Header -->
+    <header class="md-typeset">
+      {{ page.content }}
+    </header>
+
+    <!-- Posts -->
+    <div class="md-typeset link-grid">
+      {% set ns = namespace(items=[]) %}
+      {% for post in posts %}
+        {# pick updated first, else created, else original date #}
+        {% if post.meta.date is mapping %}
+          {% set sd = post.meta.date.updated or post.meta.date.created %}
+        {% else %}
+          {% set sd = post.meta.date %}
+        {% endif %}
+
+        {# normalize to string key for sorting #}
+        {% if sd is string %}
+          {% set key = sd %}
+        {% else %}
+          {% set key = sd.strftime('%Y-%m-%d') %}
+        {% endif %}
+
+        {% set _ = ns.items.append({'key': key, 'post': post}) %}
+      {% endfor %}
+
+      {%- for item in ns.items | sort(attribute='key', reverse=true) %}
+      {% set post = item.post %}
+      <h2>
+        <a href="/{{ post.post.url }}">{{ post.title }}</a>
+      </h2>
+      {% if post.meta.date is mapping %}
+        {% set created = post.meta.date.created %}
+        {% set updated = post.meta.date.updated %}
+        <span class="post-date">
+          {% if created %}
+            Created:
+            {% if created is string %}{{ created }}{% else %}{{ created.strftime('%b %d, %Y') }}{% endif %}
+          {% endif %}
+          {% if updated and updated != created %}
+            • Updated:
+            {% if updated is string %}{{ updated }}{% else %}{{ updated.strftime('%b %d, %Y') }}{% endif %}
+          {% endif %}
+        </span>
+      {% else %}
+        <span class="post-date">{{ post.meta.date.strftime('%b %d, %Y') }}</span>
+      {% endif %}
+
+
+<!--                      {% macro dump(obj) %}-->
+<!--                      {% for k, v in obj.__dict__.items() %}-->
+<!--                      <strong>{{ k }}</strong>: {{ v | string }}<br>-->
+<!--                      {% endfor %}-->
+<!--                      {% endmacro %}-->
+
+<!--                      <pre>{{ dump(post) }}</pre>-->
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

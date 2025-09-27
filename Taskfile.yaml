@@ -1,0 +1,27 @@
+version: "3"
+tasks:
+  dev:
+    desc: "Run local dev server"
+    cmds:
+      - uv run mkdocs serve
+
+  build:
+    desc: "Build the site"
+    cmds:
+      - uv run mkdocs build
+
+  containerize:
+    desc: "Create docker container"
+    deps:
+      - build
+    cmds:
+      - docker build -t sashokbg/alex_blog_v2:latest .
+
+  deploy:
+    desc: "Deploy to kubernetes"
+    deps:
+      - containerize
+    cmds:
+      - docker push sashokbg/alex_blog_v2:latest
+      - kubectl rollout restart deployment/home-cloud-blog -n home-cloud
+

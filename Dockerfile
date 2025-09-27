@@ -1,3 +1,4 @@
 FROM nginx:alpine
 
-ADD _site /blog
+ADD site /blog
+ADD blog.conf /etc/nginx/conf.d/blog.conf
