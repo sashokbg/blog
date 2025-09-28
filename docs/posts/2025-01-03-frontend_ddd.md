@@ -1,6 +1,8 @@
 ---
 title:  "Study TDD & DDD Principles in Frontend Applications"
 date:   2025-01-03
+authors:
+  - kirilov
 categories:
   - informatics
 readtime: 20
@@ -12,6 +14,7 @@ readtime: 20
 
 During my career as a web-developer, I have noticed a repeating antipattern related to front-end code. For some reason most of the best practices that we usually use on the backend code are rarely applied in the front. This looks especially true for DDD and TDD principles.
 
+<!-- more -->
 
 In this article I want to showcase how some DDD and TDD best practices can be used in a classic _React_ application with a little help of a reactive framework called _Signals_.  
 I will treat the matter as a study and try to gain knowledge and insights along the way.

@@ -8,6 +8,7 @@ tasks:
   build:
     desc: "Build the site"
     cmds:
+      - uv sync
       - uv run mkdocs build
 
   containerize:

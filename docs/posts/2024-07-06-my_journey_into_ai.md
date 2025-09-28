@@ -1,6 +1,8 @@
 ---
 title: "My Journey Into AI"
 date: 2024-06-22
+authors:
+  - kirilov
 categories:
   - informatics
 ---
@@ -8,6 +10,8 @@ categories:
 I wanted to write this article after being onboard for some time now on the "AI hype train" as many of us are since the release of ChatGPT 3.5 in late 2022.
 
 Even though I am a "tech-savvy" person and a developer, I quickly bit the bait and started imagining a completely automated world with AI agents understanding everything we want and performing any possible action etc.
+
+<!-- more -->
 
 This hype feeling was even more exacerbated due to the fact that I am bad at math (and even worse at linear algebra) and I did not have a good understanding of what exactly LLM are and how they work.
 I spent lots of my time watching videos and reading articles of authors who seemed to share the same motivation and enthusiasm as me (and probably have the same level of Maths as me).

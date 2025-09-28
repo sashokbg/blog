@@ -1,6 +1,8 @@
 ---
 title:  "Implement Living Documentation with Mkdocs"
 date:   2025-02-25
+authors:
+  - kirilov
 categories: 
   - informatics
 ---
@@ -10,6 +12,8 @@ categories:
 I have been writing my projects' documentation as code for some time now and have recently discovered [Mkdocs](https://www.mkdocs.org/) and its framework [Mkdocs Materials](https://squidfunk.github.io/mkdocs-material/getting-started/).  
 It allows you to quickly and effortlessly generate your documentation as a website.
 The large number of themes and plugins can help you add tons of functionality to your site, and the results look very professional.
+
+<!-- more -->
 
 I also love writing automation tests using [puppeteer](https://pptr.dev/guides/getting-started) to cover the main use-cases of my web applications.  
 Even if the tests are not automated in a CI pipeline, I still run them locally, and it saves me lots of time on testing.

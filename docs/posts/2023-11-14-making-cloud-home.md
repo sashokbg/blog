@@ -1,6 +1,8 @@
 ---
 title: "Making a Cloud at Home - Hardware"
 date: 2023-11-14
+authors:
+  - kirilov
 categories:
   - informatics
 ---
@@ -8,6 +10,8 @@ categories:
 # Clouds are For Everyone
 
 We all have heard of the "cloud", this new promising compute power that provides out-of-the-box solutions and seemingly endless storage and scalability. IT specialists and regular users alike, we all have used it in one form or another - streaming services, cloud computing, file storage etc.
+
+<!-- more -->
 
 Chances are that the "cloud" we all have in mind is related in one way or another to a GAFAM company.  
 It almost feels like a marketing stunt that aims at making everyone think that the cloud is something solely and exclusively dedicated to those big corporations. We can easily start thinking that it is completely out of reach for a private individual to own their own cloud.

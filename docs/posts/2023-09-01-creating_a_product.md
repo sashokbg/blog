@@ -1,13 +1,13 @@
 ---
 title: Creating a Product is Creating a Team
 date: 2023-09-01
+authors:
+  - kirilov
 categories:
   - informatics
 ---
 
 # Creating a Product is Creating a Team
-
-## A quick story
 
 I am one of the lucky people to actually be able to work for a company that tries to create its own software
 solution and become
@@ -16,6 +16,8 @@ burdened by the heavy corporate
 organization that some other companies have. The original founder is still the CEO and his little brother is the
 CTO. Family business is the best
 business after all.
+
+<!-- more -->
 
 The software our company is trying to create is a banking solution that adds many quality-of-life modern features
 for the clients of our clients.

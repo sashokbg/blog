@@ -3,16 +3,18 @@ title: "Java Incremental Project Improvement"
 date:
    created: 2023-10-29
    updated: 2023-11-03
+authors:
+   - kirilov
 categories:
    - informatics
 readtime: 10
 ---
 # Our Use Case and Tools
 
-*EDITED*  Adding PMD suppression explanations.
-
 I have recently decided to try to improve the code base we have been working on for 4 months or so by installing some static code analysis tools. The two main libraries in question are *PMD*[^pmd] and *Checkstyle* - old classics of the Java world that still get regular updates despite their age.  
 Besides those two, we also have a more modern testing library called *ArchUnit*[^archunit] to add some architecture rules and guidelines to the project.
+
+<!-- more -->
 
 To nobody's surprise, the result of the initial checks was disastrous. We had more than 2000 PMD error violations and even more checkstyle warnings.
 

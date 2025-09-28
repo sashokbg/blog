@@ -60,6 +60,7 @@ plugins:
   - blog:
       blog_dir: .
       pagination: false
+      blog_toc: true
 
 nav:
   - Home: index.md

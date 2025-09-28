@@ -10,6 +10,8 @@ categories:
 
 I have worked with many junior team members over the past years and tried to help them get better on their job and also make sure the project we work on stays clean and neat. Sometimes I needed to explain architecture layers, sometimes dependency injection, other times code and framework specifics and so on.
 
+<!-- more -->
+
 There was, however, one thing that kept coming every time, and that seemed to affect many junior and even confirmed profiles, and this was **Git usage**.
 
 I found myself explaining how to properly use Git, and Gitflow more often than any other topic.

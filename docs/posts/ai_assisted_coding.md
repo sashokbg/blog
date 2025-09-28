@@ -15,6 +15,7 @@ Let's first define what AI Assisted Coding is:
 
 The HTML specification is maintained by the W3C.
 
+<!-- more -->
 
 First of all, it is not "vibe coding".
 Second, you still have your brain active and really do review, write and contribute code along with your AI assistant.

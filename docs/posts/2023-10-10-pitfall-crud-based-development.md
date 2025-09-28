@@ -7,13 +7,16 @@ categories:
   - informatics
 ---
 
-# CRUD Based Development
-I wanted to write this article about an obvious anti-pattern that I keep encountering over and over again in my career. It is sort of related to the _Anemic Design Anti-Pattern_[^anemic_design] but on a scale that is beyond the development part of a project.  
+# CRUD-Based Development
+
+I wanted to write this article about an obvious antipattern that I keep encountering over and over again in my career. It is sort of related to the _Anemic Design Anti-Pattern_[^anemic_design] but on a scale beyond the development part of a project.  
 _It also turns into a cocky semi-rant at the end (you have been warned)._
+
+<!-- more -->
 
 We are talking about how Business Analyst / Product Owners (or whatever we call them by the time you read this article) describe business requirements and user stories. Mainly how this description is mostly based on the CRUD operations and on CRUD user interfaces, omitting in many cases the true invariants and capabilities of the system.
 
-At the end of the day if we only need CRUD screens then a database and a simple table-like interface are more than sufficient. Even an Excel sheet or MS Access project can do the job for a fraction of the price.
+At the end of the day, if we only need CRUD screens, then a database and a simple table-like interface are more than sufficient. Even an Excel sheet or MS Access project can do the job for a fraction of the price.
 
 ## Let's dive into a quick story
 Back in 2018 the company I worked for won a big project for an international transport company. We had to completely redevelop their whole bus and drivers schedule system. We are talking about a project of 15 developers split into 3 feature teams working for more than a year.  
