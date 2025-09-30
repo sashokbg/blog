@@ -96,22 +96,28 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
 
 ## Timeline
 
-| Year | Role | Client |
-| --- | --- | --- |
-| 2025 | Senior Devops | Egis Group |
-| 2024 | Architect / AI | Proxym AI Tools |
-| 2023 | Architect / Devops | Qatar Government |
-| 2022 | Architect | Bankerise, Proxym |
-| 2020 | Architect / Devops | BforBank |
-| 2019 | Tech Lead / Devops | Pernod Ricard, Point P, Air Liquide |
-| 2019 | Architect / Devops | Teréga |
-| 2019 | Architect / Devops | Transdev |
-| 2018 | Lead Back | Priceminister / Rakuten |
-| 2017 | Tech Lead | AXA |
-| 2016 | Developer | BforBank |
-| 2015 | Developer | GMF |
-| 2013 | Junior Developer | AG2R La Mondiale |
-| 2012 | Junior Developer | Boursorama Banque |
+
+<div class="grid cards" markdown>
+- | Year | Role / Client |
+  | ---- | -------------- |
+  | 2025 | Senior Devops - Egis Group |
+  | 2024 | Architect / AI - Proxym AI Tools |
+  | 2023 | Architect / Devops - Qatar Government |
+  | 2022 | Architect - Bankerise, Proxym |
+  | 2020 | Architect / Devops - BforBank |
+  | 2019 | Tech Lead / Devops - Pernod Ricard, Point P, Air Liquide |
+  | 2019 | Architect / Devops - Teréga |
+
+- | Year | Role / Client |
+  | ---- | -------------- |
+  | 2019 | Architect / Devops - Transdev |
+  | 2018 | Lead Back - Priceminister / Rakuten |
+  | 2017 | Tech Lead - AXA |
+  | 2016 | Developer - BforBank |
+  | 2015 | Developer - GMF |
+  | 2013 | Junior Developer - AG2R La Mondiale |
+  | 2012 | Junior Developer - Boursorama Banque |
+</div>
 
 ## Senior Devops · Egis Group
 

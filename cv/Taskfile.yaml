@@ -15,5 +15,8 @@ tasks:
 
   generate_mkdocs_cv:
     desc: "Generate an MD version of the CV for the mkdocs blog site"
+    preconditions:
+      - sh: test -f src/cv-data.json
+        msg: The data file for the cv is missing
     cmds:
       - node scripts/generate-cv-md.js ../docs/cv.md

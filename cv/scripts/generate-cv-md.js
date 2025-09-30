@@ -210,11 +210,22 @@ function renderTimeline(timeline) {
       const year = item.year || '';
       const role = item.role || '';
       const client = item.client || '';
-      return `| ${year} | ${escapePipes(role)} | ${escapePipes(client)} |`;
+      return `  | ${year} | ${escapePipes(role)} - ${escapePipes(client)} |`;
     })
-    .join('\n');
 
-  return `## Timeline\n\n| Year | Role | Client |\n| --- | --- | --- |\n${rows}`;
+  const half = Math.ceil(rows.length / 2);
+
+
+  return `## Timeline\n\n
+<div class="grid cards" markdown>
+- | Year | Role / Client |
+  | ---- | -------------- |
+${rows.slice(0, half).join("\n")}
+
+- | Year | Role / Client |
+  | ---- | -------------- |
+${rows.slice(half).join("\n")}
+</div>`;
 }
 
 function renderExperiences(experiences) {
