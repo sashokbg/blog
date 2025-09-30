@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV — Web Components</title>
+    <style>
+      /* Print to A4 pages with reasonable margins */
+      @page { size: A4; margin: 12mm; }
+      @media print {
+        html, body { background: #ffffff !important; }
+      }
+    </style>
+    <!-- No external deps needed; components are vanilla Web Components -->
+  </head>
+  <body>
+    <cv-component data-load-data="src/cv-data.json">
+    </cv-component>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+  </html>

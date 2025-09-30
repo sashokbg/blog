@@ -1,0 +1,27 @@
+:host {
+    display: block;
+}
+
+.group {
+    margin-bottom: .75rem;
+}
+
+.cat {
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+}
+
+.chip {
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: .15rem .45rem;
+    border-radius: 999px;
+    font-size: .75rem;
+}

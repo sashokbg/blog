@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  dev:
+    desc: Start local server for testing
+    vars:
+      PORT: 5173
+      DIR: .
+    preconditions:
+      - sh: command -v python3 >/dev/null 2>&1
+        msg: "python3 not found. Install Python 3 to run the dev server."
+    cmds:
+      - python3 -m http.server -d {{.DIR}} {{.PORT}}
+    silent: false
+
+  generate_mkdocs_cv:
+    desc: "Generate an MD version of the CV for the mkdocs blog site"
+    cmds:
+      - node scripts/generate-cv-md.js ../docs/cv.md

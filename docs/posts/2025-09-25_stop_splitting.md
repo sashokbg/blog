@@ -159,10 +159,10 @@ I sometimes see developers who barely wrote any code in their fresh project, spe
 
 ## Conclusion
 
-Working on a large project often means having to dig deep into other people's code. Having to search for hours for the precise place to surgically modify the code.
+Working on a large project often means having to dig deep into other people's work. Having to search for hours for the precise place to surgically modify the code.
 This exercise is painstakingly hard, and we naturally tend to prefer creating our own corner, where we understand things, where we are in control, where it is simpler.
 
-We like fragmenting things because we don't like to have to sith through all the complexity of the existing system, but by doing so, we make the problem even worse.
+We like fragmenting things because we don't like to have to sift through all the complexity of the existing system, but by doing so, we make the problem even worse.
 
 From classes and packages, to repositories, documentation, and backlog, we multiply and often deteriorate the quality of our projects. Business logic and architecture get diluted into hundreds of places, focus is lost, leadership becomes hard to establish.  
 Not having a single source of truth, our ability to accurately plan and implement features is greatly reduced.
@@ -170,6 +170,8 @@ Not having a single source of truth, our ability to accurately plan and implemen
 And so very often, we don't even realize we are sliding on the slipper slope of fragmentation.
 
 ## Links
+
+Here are some links to publications that talk about similar issues:
 
 - [Introducing Domain-Oriented Microservice Architecture](https://www.uber.com/en-FR/blog/microservice-architecture/)
 

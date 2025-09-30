@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Vitae Schema",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "experience": {
+          "type": "string"
+        },
+        "about": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "education": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trainings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_projects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "language": {
+                "type": "string"
+              },
+              "level": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "language",
+              "level"
+            ]
+          }
+        },
+        "hobbies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contacts": {
+          "type": "object",
+          "properties": {
+            "phone": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "link": {
+                "type": "string",
+                "format": "uri"
+              },
+              "ico": {
+                "type": "string",
+                "description": "Icon for the link: either a URL to an image or a UTF character (emoji)"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "lastname",
+        "role",
+        "experience"
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "category",
+          "items"
+        ]
+      }
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/timeline_item"
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/experience"
+      }
+    }
+  },
+  "required": [
+    "identity",
+    "skills",
+    "timeline",
+    "experiences"
+  ],
+  "$defs": {
+    "timeline_item": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "role": {
+          "type": "string"
+        },
+        "client": {
+          "type": "string"
+        }
+      }
+    },
+    "experience": {
+      "type": "object",
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "pattern": "^(0[1-9]|1[0-2])-[0-9]{4}$"
+        },
+        "end_date": {
+          "type": "string",
+          "pattern": "^(0[1-9]|1[0-2])-[0-9]{4}$"
+        },
+        "client_name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "mission_name": {
+          "type": "string"
+        },
+        "mission_image": {
+          "type": "string",
+          "format": "uri"
+        },
+        "mission_description": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "roles_and_responsibilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ecosystem": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "team_size": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "role",
+        "mission_name",
+        "client_name",
+        "ecosystem",
+        "end_date",
+        "mission_description",
+        "roles_and_responsibilities",
+        "start_date",
+        "team_size"
+      ]
+    }
+  }
+}

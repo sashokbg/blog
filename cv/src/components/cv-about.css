@@ -1,0 +1,7 @@
+:host { display: block; }
+p { margin: 0 0 .6rem; }
+p:last-child { margin-bottom: 0; }
+
+@media print {
+  p { margin-bottom: .4rem; }
+}

@@ -1,0 +1,81 @@
+:host {
+    display: block;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* align with sidebar width */
+    gap: 1rem;
+    margin: .75rem 0;
+}
+
+.item:not(:last-child) {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.meta {
+    border-right: 1px dashed #e5e7eb;
+    padding-right: .75rem;
+    color: #374151;
+}
+
+.meta .team {
+    color: #6b7280;
+    margin-top: .25rem;
+}
+
+.meta .image {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.meta .image img {
+    display: block;
+    max-width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.meta .title { font-weight: 700; display:none; }
+
+.period {
+    color: #6b7280;
+    font-variant-numeric: tabular-nums;
+}
+
+.role { font-weight: 700; }
+
+.client {
+    color: #111827;
+}
+
+.mission {
+    font-weight: 700;
+    color: #111827;
+}
+
+.content .client {
+    color: #5e5e5e;
+    margin-bottom: .25rem;
+}
+
+ul {
+    margin: .35rem 0 .5rem;
+    padding-left: 1.1rem;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+}
+
+.chip {
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: .15rem .45rem;
+    border-radius: 999px;
+    font-size: .75rem;
+}
