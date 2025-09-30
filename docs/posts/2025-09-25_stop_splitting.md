@@ -6,7 +6,7 @@ authors:
 categories:
   - informatics
 
-readtime: 20
+readtime: 12
 ---
 
 # Please Stop Splitting Things
