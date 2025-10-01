@@ -175,7 +175,12 @@ function renderSnapshot(identity) {
     return '';
   }
 
-  return `## Snapshot\n\n<div class="grid cards" markdown>\n${cards.join('\n\n')}\n</div>`;
+  return `
+## Snapshot
+
+<div class="grid cards" markdown>
+${cards.join('\n\n')}
+</div>`;
 }
 
 function createListCard(icon, title, entries) {
@@ -196,7 +201,12 @@ function renderSkills(skills) {
     return `-   **${skill.category}**\n\n    ${chips}`;
   });
 
-  return `## Skills\n\n<div class="grid cards" markdown>\n${cards.join('\n\n')}\n</div>`;
+  return `
+### Skills
+
+<div class="grid cards" markdown>
+${cards.join('\n\n')}
+</div>`;
 }
 
 function renderTimeline(timeline) {
@@ -216,7 +226,9 @@ function renderTimeline(timeline) {
   const half = Math.ceil(rows.length / 2);
 
 
-  return `## Timeline\n\n
+  return `
+### Timeline
+
 <div class="grid cards" markdown>
 - | Year | Role / Client |
   | ---- | -------------- |
@@ -226,6 +238,7 @@ ${rows.slice(0, half).join("\n")}
   | ---- | -------------- |
 ${rows.slice(half).join("\n")}
 </div>`;
+
 }
 
 function renderExperiences(experiences) {
@@ -240,12 +253,17 @@ function renderExperiences(experiences) {
     })
     .map(createExperienceBlock);
 
-  return `${blocks.join('\n\n')}`;
+  return `
+## Work Experience
+  
+${blocks.join('\n\n')}`;
 }
 
 function createExperienceBlock(exp) {
   const title = escapeQuotes(`${exp.role || 'Role'} · ${exp.client_name || 'Client'}`);
-  const lines = [`## ${title}\n\n`];
+  const lines = [`
+### ${title}\n\n
+`];
 
   if (exp.mission_name) {
     lines.push(`:material-briefcase: **Mission:** ${exp.mission_name}\n`);
@@ -259,11 +277,15 @@ function createExperienceBlock(exp) {
   const duration = formatDuration(exp.start_date, exp.end_date);
   if (range || duration) {
     const durationSuffix = duration ? ` (${duration})` : '';
-    lines.push(`:material-calendar: **When:** ${range}${durationSuffix}\n`);
-  }
+    lines.push(`
+<div markdown style="display: flex; justify-content: space-between">
 
-  if (exp.team_size) {
-    lines.push(`:material-account-group-outline: **Team size:** ${exp.team_size}\n`);
+  <span markdown>:material-calendar: **When:** ${range}${durationSuffix}</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** ${exp.team_size}</span>
+
+</div>
+`);
   }
 
   if (Array.isArray(exp.mission_description) && exp.mission_description.length > 0) {
@@ -283,7 +305,7 @@ function createExperienceBlock(exp) {
     lines.push(`:material-cog-outline: **Ecosystem**\n\n${tech}\n`);
   }
 
-  return lines.join('\n');
+  return lines.join('\n') + '\n---';
 }
 
 function formatDateRange(start, end) {

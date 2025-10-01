@@ -26,6 +26,7 @@ Enthusiast of best practices, Agile methodology, as well as BDD, DDD, and TDD.
 
 Positive, patient, and pedagogical, enjoying both sharing and explaining, as well as learning from others.
 
+
 ## Snapshot
 
 <div class="grid cards" markdown>
@@ -62,7 +63,8 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
     - Guitar
 </div>
 
-## Skills
+
+### Skills
 
 <div class="grid cards" markdown>
 -   **Devops & Cloud**
@@ -94,8 +96,8 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
     `Cucumber` · `Archunit` · `EsLint` · `PyLint` · `Mockito` · `Gatling` · `jMeter` · `TDD` · `BDD`
 </div>
 
-## Timeline
 
+### Timeline
 
 <div class="grid cards" markdown>
 - | Year | Role / Client |
@@ -119,14 +121,24 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
   | 2012 | Junior Developer - Boursorama Banque |
 </div>
 
-## Senior Devops · Egis Group
+
+## Work Experience
+  
+
+### Senior Devops · Egis Group
+
 
 
 :material-briefcase: **Mission:** Deployment v2 / Cloud Native Database
 
-:material-calendar: **When:** May 2025 - Oct 2025 (6 mos)
 
-:material-account-group-outline: **Team size:** 4p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** May 2025 - Oct 2025 (6 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 4p</span>
+
+</div>
 
 **Description**
 
@@ -153,15 +165,23 @@ Writing disaster recovery plans
 
 `OVH Cloud` · `Azure` · `Kubernetes` · `Microservice architecture`
 
+---
 
-## Architect & Author · Proxym
+
+### Architect & Author · Proxym
+
 
 
 :material-briefcase: **Mission:** Product Assistant AI Agent
 
-:material-calendar: **When:** May 2024 - May 2025 (1 yr 1 mo)
 
-:material-account-group-outline: **Team size:** 5p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** May 2024 - May 2025 (1 yr 1 mo)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 5p</span>
+
+</div>
 
 **Description**
 
@@ -183,15 +203,23 @@ Implementing a chain of AI-powered tools: embedding models, classification, RAG,
 
 `Azure` · `Container Apps` · `Puppeteer` · `LLM` · `RAG` · `Agents` · `LangChain` · `Pydantic AI` · `N8N` · `Knowledge Graphs`
 
+---
 
-## Architect & Devops · Qatar Government (Ministry of Health)
+
+### Architect & Devops · Qatar Government (Ministry of Health)
+
 
 
 :material-briefcase: **Mission:** Symptoms Checker
 
-:material-calendar: **When:** Feb 2023 - May 2024 (1 yr 4 mos)
 
-:material-account-group-outline: **Team size:** 6p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Feb 2023 - May 2024 (1 yr 4 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 6p</span>
+
+</div>
 
 **Description**
 
@@ -212,15 +240,23 @@ Application Architect
 
 `React Native` · `Node.js` · `NestJS` · `PostgreSQL` · `Azure AKS (Kubernetes)` · `Azure DevOps (CI/CD)`
 
+---
 
-## Architect & Devops · Proxym
+
+### Architect & Devops · Proxym
+
 
 
 :material-briefcase: **Mission:** Bankerise
 
-:material-calendar: **When:** Oct 2022 - Jan 2023 (4 mos)
 
-:material-account-group-outline: **Team size:** 8p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Oct 2022 - Jan 2023 (4 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 8p</span>
+
+</div>
 
 **Description**
 
@@ -243,15 +279,23 @@ Application & DevOps Architect
 
 `Hexagonal architecture (DDD)` · `Foundation module with SPI-style extensions` · `Retail Banking module` · `CQRS` · `Event Driven Architecture` · `Java` · `Spring` · `React` · `Docker`
 
+---
 
-## Architect & Devops · BforBank
+
+### Architect & Devops · BforBank
+
 
 
 :material-briefcase: **Mission:** Move to Cloud
 
-:material-calendar: **When:** Mar 2020 - Oct 2021 (1 yr 8 mos)
 
-:material-account-group-outline: **Team size:** 12p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Mar 2020 - Oct 2021 (1 yr 8 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 12p</span>
+
+</div>
 
 **Description**
 
@@ -274,15 +318,23 @@ Deployed GCP infrastructure for Kubernetes with Terraform
 
 `Microservices` · `Kafka` · `Google Cloud Platform` · `Kubernetes` · `Helm` · `ArgoCD` · `Terraform` · `Ansible` · `Java` · `Angular`
 
+---
 
-## Tech Lead · BforBank
+
+### Tech Lead · BforBank
+
 
 
 :material-briefcase: **Mission:** Quality Workflow & Tools
 
-:material-calendar: **When:** Mar 2020 - Oct 2021 (1 yr 8 mos)
 
-:material-account-group-outline: **Team size:** 3p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Mar 2020 - Oct 2021 (1 yr 8 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 3p</span>
+
+</div>
 
 **Description**
 
@@ -305,15 +357,23 @@ Gathered requirements from developers and Tech Leads
 
 `SonarQube` · `GitLab` · `Asciidoc (living documentation)` · `NestJS` · `REST` · `Angular` · `Cytoscape` · `Graph algorithms`
 
+---
 
-## Architect & Devops · Transdev
+
+### Architect & Devops · Transdev
+
 
 
 :material-briefcase: **Mission:** Project FDS Next
 
-:material-calendar: **When:** Jul 2019 - Mar 2020 (9 mos)
 
-:material-account-group-outline: **Team size:** 15p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Jul 2019 - Mar 2020 (9 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 15p</span>
+
+</div>
 
 **Description**
 
@@ -342,15 +402,23 @@ Defined and implemented application and cloud architecture
 
 `AWS` · `CloudFormation` · `Jenkins` · `Groovy` · `Bash` · `AsciiDoc` · `Backend: Java 11, Node.js, Spring (Boot, MVC, Data, Security)` · `Frontend: Angular 8, TypeScript, HTML5, CSS3`
 
+---
 
-## Architect & Devops · Teréga
+
+### Architect & Devops · Teréga
+
 
 
 :material-briefcase: **Mission:** STAR Portal
 
-:material-calendar: **When:** Jul 2018 - Jul 2019 (1 yr 1 mo)
 
-:material-account-group-outline: **Team size:** 15p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Jul 2018 - Jul 2019 (1 yr 1 mo)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 15p</span>
+
+</div>
 
 **Description**
 
@@ -383,15 +451,23 @@ Project recovery and leadership
 
 `AWS Serverless: API Gateway, SNS, SQS` · `S3 + Lambda events for data import` · `Bitbucket Pipelines` · `Terraform` · `Bash` · `Backend: Node.js, TypeScript, Lambda` · `Frontend: Angular 6, HTML5, CSS3`
 
+---
 
-## Techlead & Devops · Pointp (Saint-Gobain), Air Liquide (Aries), Pernod Ricard
+
+### Techlead & Devops · Pointp (Saint-Gobain), Air Liquide (Aries), Pernod Ricard
+
 
 
 :material-briefcase: **Mission:** Mini Projects at Fixed Price
 
-:material-calendar: **When:** Apr 2018 - Jul 2018 (4 mos)
 
-:material-account-group-outline: **Team size:** ~3p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Apr 2018 - Jul 2018 (4 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** ~3p</span>
+
+</div>
 
 **Description**
 
@@ -418,15 +494,23 @@ Full stack development
 
 `AWS` · `GCP` · `Cordova` · `Angular 6` · `Java` · `Node.js`
 
+---
 
-## Developer & SCRUM · Priceminister (Rakuten)
+
+### Developer & SCRUM · Priceminister (Rakuten)
+
 
 
 :material-briefcase: **Mission:** Rakuten Ads
 
-:material-calendar: **When:** Apr 2017 - Apr 2018 (1 yr 1 mo)
 
-:material-account-group-outline: **Team size:** 6p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Apr 2017 - Apr 2018 (1 yr 1 mo)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 6p</span>
+
+</div>
 
 **Description**
 
@@ -452,15 +536,23 @@ Feature development and refactoring
 
 `Cucumber` · `Agile` · `Scrum` · `Java 8` · `Spring`
 
+---
 
-## Tech Lead · AXA Assurances
+
+### Tech Lead · AXA Assurances
+
 
 
 :material-briefcase: **Mission:** FICOVIE Golden Record
 
-:material-calendar: **When:** Jan 2017 - Apr 2017 (4 mos)
 
-:material-account-group-outline: **Team size:** 3p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Jan 2017 - Apr 2017 (4 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 3p</span>
+
+</div>
 
 **Description**
 
@@ -484,15 +576,23 @@ Designed data models
 
 `Java` · `Spring Boot` · `Spring Batch` · `Angular 2`
 
+---
 
-## Developer · BforBank
+
+### Developer · BforBank
+
 
 
 :material-briefcase: **Mission:** Secret Code Reset
 
-:material-calendar: **When:** Mar 2016 - Jan 2017 (11 mos)
 
-:material-account-group-outline: **Team size:** 5p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Mar 2016 - Jan 2017 (11 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 5p</span>
+
+</div>
 
 **Description**
 
@@ -516,15 +616,23 @@ Backend development
 
 `Java 8` · `Spring Boot` · `Thymeleaf` · `jQuery` · `Oracle DB`
 
+---
 
-## Developer · GMF
+
+### Developer · GMF
+
 
 
 :material-briefcase: **Mission:** Expense Report & Stock Management Maintenance
 
-:material-calendar: **When:** Mar 2015 - Mar 2016 (1 yr 1 mo)
 
-:material-account-group-outline: **Team size:** 4p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Mar 2015 - Mar 2016 (1 yr 1 mo)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 4p</span>
+
+</div>
 
 **Description**
 
@@ -547,15 +655,23 @@ Backend development and maintenance
 
 `JSF` · `DB2` · `WebSphere` · `PLSQL` · `Java batch`
 
+---
 
-## Developer · AG2R LA MONDIALE
+
+### Developer · AG2R LA MONDIALE
+
 
 
 :material-briefcase: **Mission:** Third Party Application Maintenance
 
-:material-calendar: **When:** Aug 2013 - Mar 2015 (1 yr 8 mos)
 
-:material-account-group-outline: **Team size:** 3p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Aug 2013 - Mar 2015 (1 yr 8 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 3p</span>
+
+</div>
 
 **Description**
 
@@ -577,15 +693,23 @@ Maintenance and evolution
 
 `Jahia 6.1` · `Jahia 6.6` · `Java` · `Spring` · `JSP` · `JSF` · `MySQL` · `Linux` · `Tomcat` · `Apache`
 
+---
 
-## Junior Developer · Boursorama Bank
+
+### Junior Developer · Boursorama Bank
+
 
 
 :material-briefcase: **Mission:** Client Relationship Management / Referral Program
 
-:material-calendar: **When:** Feb 2012 - Jun 2013 (1 yr 5 mos)
 
-:material-account-group-outline: **Team size:** 8p
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Feb 2012 - Jun 2013 (1 yr 5 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 8p</span>
+
+</div>
 
 **Description**
 
@@ -606,3 +730,4 @@ Web app development with Spring MVC, Struts, Hibernate (Criteria API), jQuery
 
 `Spring MVC` · `Struts` · `Hibernate (Criteria API)` · `jQuery` · `Oracle` · `PL/SQL` · `JUnit` · `Selenium` · `CI` · `SVN`
 
+---

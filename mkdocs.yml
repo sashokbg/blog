@@ -49,6 +49,8 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.details
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
