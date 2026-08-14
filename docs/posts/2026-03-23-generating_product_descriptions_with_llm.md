@@ -5,6 +5,7 @@ authors:
   - kirilov
 categories: 
   - informatics
+readtime: 18
 ---
 
 # Generating Product Descriptions with LLMs
