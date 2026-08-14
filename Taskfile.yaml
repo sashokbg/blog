@@ -9,13 +9,13 @@ tasks:
   dev:
     desc: "Run local dev server"
     cmds:
-      - uv run mkdocs serve
+      - uv run -m mkdocs serve
 
   build:
     desc: "Build the site"
     cmds:
       - uv sync
-      - uv run mkdocs build
+      - uv run -m mkdocs build
 
   containerize:
     desc: "Create docker container"
