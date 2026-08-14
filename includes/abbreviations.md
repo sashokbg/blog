@@ -13,3 +13,5 @@
 *[Apache 2]: A license providing reliable and long-lived software products through collaborative, open-source software development. url: "https://www.apache.org/licenses/LICENSE-2.0"
 *[DDD]: Domain Driven Design, url: "https://en.wikipedia.org/wiki/Domain-driven_design"
 *[TDD]: Test Driven Development, url: "https://en.wikipedia.org/wiki/Test-driven_development"
+*[RAG]: Retrieval-Augmented Generation, url: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+*[harness]: An AI harness is the software infrastructure that surrounds a large language model (LLM), enabling it to perform tasks by managing context, executing tools, and providing feedback loops. 
