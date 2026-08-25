@@ -12,6 +12,8 @@ class CV extends HTMLElement {
     super();
     this.attachShadow({mode: 'open'});
     this._styleCache = new Map();
+    this._onWindowResize = () => this._drawPageBreakLines();
+    this._onBeforePrint = () => this._removePageBreakOverlay();
   }
 
   connectedCallback() {
@@ -43,6 +45,7 @@ class CV extends HTMLElement {
     this.shadowRoot.innerHTML += `
       <div class="page">
         <div class="actions">
+          <button type="button" data-action="page-breaks" aria-pressed="false">Show Page Breaks</button>
           <button type="button" data-action="download">Download CV</button>
           <span class="status" data-role="status" hidden></span>
         </div>
@@ -71,23 +74,126 @@ class CV extends HTMLElement {
     sidebar.data = data.identity;
     main.data = data;
     if (exps) exps.data = data.experiences || [];
+    if (this._pageBreakOverlay) {
+      requestAnimationFrame(() => this._drawPageBreakLines());
+    }
   }
 
   disconnectedCallback() {
     if (this._downloadBtn) {
       this._downloadBtn.removeEventListener('click', this._onDownload);
     }
+    if (this._pageBreaksBtn) {
+      this._pageBreaksBtn.removeEventListener('click', this._onTogglePageBreaks);
+    }
+    this._removePageBreakOverlay();
   }
 
   _bindControls() {
     if (this._downloadBtn) {
       this._downloadBtn.removeEventListener('click', this._onDownload);
     }
+    if (this._pageBreaksBtn) {
+      this._pageBreaksBtn.removeEventListener('click', this._onTogglePageBreaks);
+    }
     this._downloadBtn = this.shadowRoot.querySelector('[data-action="download"]');
+    this._pageBreaksBtn = this.shadowRoot.querySelector('[data-action="page-breaks"]');
     this._statusEl = this.shadowRoot.querySelector('[data-role="status"]');
     this._onDownload = () => this._downloadCV();
+    this._onTogglePageBreaks = () => this._togglePageBreaks();
     if (this._downloadBtn) {
       this._downloadBtn.addEventListener('click', this._onDownload);
+    }
+    if (this._pageBreaksBtn) {
+      this._pageBreaksBtn.addEventListener('click', this._onTogglePageBreaks);
+    }
+  }
+
+  // Mirrors the @page rule in index.html (A4, 12mm margins) so the
+  // overlay lines land where the browser will actually cut the page.
+  _togglePageBreaks() {
+    if (this._pageBreakOverlay) {
+      this._removePageBreakOverlay();
+    } else {
+      this._showPageBreakOverlay();
+    }
+  }
+
+  _showPageBreakOverlay() {
+    if (this._pageBreakOverlay) return;
+    const overlay = document.createElement('div');
+    overlay.dataset.cvPageBreaks = '';
+    Object.assign(overlay.style, {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '0',
+      pointerEvents: 'none',
+      zIndex: '2147483647'
+    });
+    document.body.appendChild(overlay);
+    this._pageBreakOverlay = overlay;
+    this._drawPageBreakLines();
+    window.addEventListener('resize', this._onWindowResize);
+    window.addEventListener('beforeprint', this._onBeforePrint);
+    if (this._pageBreaksBtn) {
+      this._pageBreaksBtn.setAttribute('aria-pressed', 'true');
+      this._pageBreaksBtn.textContent = 'Hide Page Breaks';
+    }
+  }
+
+  _removePageBreakOverlay() {
+    if (!this._pageBreakOverlay) return;
+    this._pageBreakOverlay.remove();
+    this._pageBreakOverlay = null;
+    window.removeEventListener('resize', this._onWindowResize);
+    window.removeEventListener('beforeprint', this._onBeforePrint);
+    if (this._pageBreaksBtn) {
+      this._pageBreaksBtn.setAttribute('aria-pressed', 'false');
+      this._pageBreaksBtn.textContent = 'Show Page Breaks';
+    }
+  }
+
+  _drawPageBreakLines() {
+    const overlay = this._pageBreakOverlay;
+    if (!overlay) return;
+    overlay.innerHTML = '';
+
+    const PX_PER_MM = 96 / 25.4;
+    const PAGE_HEIGHT_MM = 297;
+    const PAGE_MARGIN_MM = 12;
+    const pageHeightPx = (PAGE_HEIGHT_MM - PAGE_MARGIN_MM * 2) * PX_PER_MM;
+
+    const bodyRect = document.body.getBoundingClientRect();
+    const originY = bodyRect.top + window.scrollY;
+    const totalHeight = document.documentElement.scrollHeight;
+
+    let pageNumber = 1;
+    for (let y = originY + pageHeightPx; y < originY + totalHeight; y += pageHeightPx) {
+      pageNumber++;
+      const line = document.createElement('div');
+      Object.assign(line.style, {
+        position: 'absolute',
+        left: '0',
+        width: '100%',
+        top: `${y}px`,
+        borderTop: '2px dashed #dc2626'
+      });
+      const label = document.createElement('span');
+      label.textContent = `Page ${pageNumber}`;
+      Object.assign(label.style, {
+        position: 'absolute',
+        right: '4px',
+        top: '2px',
+        fontSize: '10px',
+        color: '#dc2626',
+        fontFamily: 'system-ui, sans-serif',
+        background: '#fff',
+        padding: '0 4px'
+      });
+      line.appendChild(label);
+      overlay.appendChild(line);
     }
   }
 

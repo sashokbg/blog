@@ -41,6 +41,11 @@
     opacity: .7;
 }
 
+.actions button[aria-pressed="true"] {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
 .actions .status {
     font-size: .85rem;
     color: #1e293b;
@@ -83,6 +88,12 @@ cv-sidebar, cv-main {
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 1rem;
+}
+
+@media print {
+    .actions {
+        display: none;
+    }
 }
 
 @page {

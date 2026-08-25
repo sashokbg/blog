@@ -3,21 +3,42 @@
 }
 
 .item {
-    display: grid;
-    grid-template-columns: 320px 1fr; /* align with sidebar width */
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
     margin: .75rem 0;
+    break-inside: avoid;
+    page-break-inside: avoid; /* Chrome/print fallback for older engines */
 }
 
-.item:not(:last-child) {
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid #e5e7eb;
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+p {
+    margin: 1px;
+}
+
+.padding {
+    display: none;
+}
+
+@media print {
+    .padding {
+        display: block;
+    }
+}
+
+.item:not(:first-child) div.border {
+    padding-top: 1.25rem;
+    border-top: 1px solid #e5e7eb;
 }
 
 .meta {
     border-right: 1px dashed #e5e7eb;
     padding-right: .75rem;
     color: #374151;
+    flex: 1;
 }
 
 .meta .team {
@@ -37,14 +58,24 @@
     object-fit: contain;
 }
 
-.meta .title { font-weight: 700; display:none; }
+.meta .title {
+    font-weight: 700;
+    display: none;
+}
 
 .period {
     color: #6b7280;
     font-variant-numeric: tabular-nums;
 }
 
-.role { font-weight: 700; }
+.duration {
+    color: #9ca3af;
+    font-size: .85em;
+}
+
+.role {
+    font-weight: 700;
+}
 
 .client {
     color: #111827;
@@ -53,6 +84,10 @@
 .mission {
     font-weight: 700;
     color: #111827;
+}
+
+.content {
+    flex: 3;
 }
 
 .content .client {
@@ -78,4 +113,9 @@ ul {
     padding: .15rem .45rem;
     border-radius: 999px;
     font-size: .75rem;
+}
+
+h3.mission {
+    padding-top: 0;
+    margin-top: 0;
 }

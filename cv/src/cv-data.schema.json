@@ -201,6 +201,11 @@
         },
         "team_size": {
           "type": "string"
+        },
+        "padding": {
+          "type": "number",
+          "default": 0,
+          "description": "Number of empty lines to add at the end to ensure better page break visualization"
         }
       },
       "required": [
