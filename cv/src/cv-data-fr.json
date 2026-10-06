@@ -1,0 +1,686 @@
+{
+  "identity": {
+    "name": "Aleksandar",
+    "lastname": "Kirilov",
+    "role": "Architecte Logiciel",
+    "experience": "15 ans d'expérience",
+    "contacts": {
+      "email": "aleksandar@kirilov.dev",
+      "phone": "+33695023765"
+    },
+    "about": [
+      "Passionné de l'informatique et les technologies numériques avec 15 ans d'expérience en équipe au sein de grandes entreprises telles que Transdev, Terega, Boursorama, AG2R La Mondiale, GMF, AXA, Priceminister, BforBank, et d'autres.",
+      "Je suis capable de piloter un projet de sa conception à la production en mettant en œuvre une solution technique adaptée à la situation et aux contraintes du client.",
+      "Expert en terme de bonnes pratiques, de la méthodologie Agile, ainsi que du BDD, DDD et TDD.",
+      "Positif, patient et pédagogue, j'appréciant de partager et expliquer mais également d'apprendre au contact des autres."
+    ],
+    "education": [
+      "2010 - Ingénieur d'études et besoin, Université du Luxembourg"
+    ],
+    "trainings": [
+      "2018 : Linux Foundation CKAD : Formation uniquement"
+    ],
+    "personal_projects": [
+      "Hébergement cloud personnel : k8s bare metal",
+      "Agent IA pour application de planification",
+      "Frameworks BDD",
+      "Framework d'exercices Git",
+      "Lecture de notes de piano",
+      "Blog personnel",
+      "Système d'arrosage de plantes Arduino"
+    ],
+    "languages": [
+      {
+        "language": "Français",
+        "level": "C2"
+      },
+      {
+        "language": "Anglais",
+        "level": "C1"
+      },
+      {
+        "language": "Bulgare",
+        "level": "Natif"
+      }
+    ],
+    "hobbies": [
+      "Électronique",
+      "Informatique",
+      "Photographie",
+      "Tennis de table",
+      "Guitare"
+    ],
+    "links": [
+      {
+        "link": "https://blog.kirilov.dev/",
+        "ico": "📝"
+      },
+      {
+        "link": "https://github.com/sashokbg/",
+        "ico": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+      },
+      {
+        "link": "https://www.linkedin.com/in/alexander-kirilov-b0373a62/",
+        "ico": "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Devops & Cloud",
+      "items": [
+        "GCP",
+        "AWS",
+        "Azure",
+        "Cloud Native (Kubernetes / Docker)",
+        "Cloudformation",
+        "Terraform / Open Tofu",
+        "Ansible",
+        "ArgoCD",
+        "Helm"
+      ]
+    },
+    {
+      "category": "Langages de programmation",
+      "items": [
+        "Java 21/JEE",
+        "Javascript",
+        "Rust",
+        "Typescript",
+        "Python",
+        "Shell"
+      ]
+    },
+    {
+      "category": "IA",
+      "items": [
+        "Embedding models",
+        "Agents",
+        "RAG",
+        "Knowledge Graphs",
+        "Langchain",
+        "N8N",
+        "Pydantic AI",
+        "MCP"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Python Flask",
+        "Java Spring",
+        "Hibernate – JPA",
+        "NodeJs",
+        "NestJs",
+        "NextJs",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL / Mariadb",
+        "Oracle",
+        "DynamoDB",
+        "H2"
+      ]
+    },
+    {
+      "category": "Infra & Outils",
+      "items": [
+        "Linux",
+        "Nginx",
+        "Git",
+        "Gitlab CI",
+        "Bitbucket CI",
+        "Maven",
+        "Gradle",
+        "Nexus",
+        "Sonar",
+        "Apache",
+        "Jenkins",
+        "Npm",
+        "Taskfile"
+      ]
+    },
+    {
+      "category": "Qualité",
+      "items": [
+        "Cucumber",
+        "Archunit",
+        "EsLint",
+        "PyLint",
+        "Mockito",
+        "Gatling",
+        "jMeter",
+        "TDD",
+        "BDD"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "year": 2012,
+      "role": "Développeur Junior"
+    },
+    {
+      "year": 2015,
+      "role": "Développeur"
+    },
+    {
+      "year": 2017,
+      "role": "Lead Back"
+    },
+    {
+      "year": 2018,
+      "role": "Tech Lead"
+    },
+    {
+      "year": 2019,
+      "role": "Devops"
+    },
+    {
+      "year": 2019,
+      "role": "Architecte"
+    },
+    {
+      "year": 2023,
+      "role": "Architecte Devops"
+    },
+    {
+      "year": 2024,
+      "role": "Architecte IA"
+    },
+    {
+      "year": 2025,
+      "role": "CTO / Responsable IT"
+    }
+  ],
+  "experiences": [
+    {
+      "start_date": "05-2026",
+      "end_date": "06-2026",
+      "client_name": "EGIS Group",
+      "role": "Ingénieur Data",
+      "mission_name": "Amélioration des performances DB",
+      "mission_description": [
+        "La solution de stationnement digital d'EGIS propose un Dashboard BI pour ses clients",
+        "Les Dashboards s'appuient sur un Data Warehouse, basé sur une base de données relationnelle Postgres",
+        "Le DW souffre de problèmes de performance dus au volume important de données ingérées et à la complexité de certaines projections"
+      ],
+      "roles_and_responsibilities": [
+        "Analyser le schéma de la base de données, les requêtes et les procédures stockées afin d'identifier d'éventuels problèmes de conception et de performance",
+        "Proposer un plan d'amélioration, basé sur l'architecture existante et les contraintes techniques",
+        "Écrire et exécuter des tests de charge pour chaque cas d'usage"
+      ],
+      "ecosystem": [
+        "SQL Server 2019",
+        "MSSQL Extended Events (auparavant) Profiler",
+        ".NET"
+      ],
+      "team_size": "2p"
+    },
+    {
+      "start_date": "01-2026",
+      "end_date": "05-2026",
+      "client_name": "Phoenix Fleet Management",
+      "role": "Analyste Base de Données",
+      "mission_name": "Amélioration des performances DB",
+      "mission_description": [
+        "Analyser et déterminer l'origine des problèmes de performance d'une base MSSQL 2019 on-prem",
+        "Préparer et présenter des rapports de performance, basés sur des tests de charge",
+        "Étudier la possibilité d'utiliser l'IA pour améliorer davantage la performance de la DB et accélérer le déploiement.",
+        "Résultats : amélioration de performance de 3 à 4 fois sur plus de 10 fonctionnalités majeures"
+      ],
+      "roles_and_responsibilities": [
+        "Analyser le schéma de la base de données, les requêtes et les procédures stockées afin d'identifier d'éventuels problèmes de conception et de performance",
+        "Proposer un plan d'amélioration, basé sur l'architecture existante et les contraintes techniques",
+        "Écrire et exécuter des tests de charge pour chaque cas d'usage"
+      ],
+      "ecosystem": [
+        "SQL Server 2019",
+        "MSSQL Extended Events (auparavant) Profiler",
+        ".NET"
+      ],
+      "team_size": "4p"
+    },
+    {
+      "start_date": "05-2025",
+      "end_date": "10-2025",
+      "client_name": "Egis Group",
+      "role": "Devops Senior",
+      "mission_name": "Déploiement v2 / Base de données Cloud Native",
+      "mission_description": [
+        "Modernisation et migration de l'infrastructure on-prem et VM vers le cloud native. Préparation des exigences ISO 27001.",
+        "Migration du cluster Postgres vers Cloud Native Postgres.",
+        "Amélioration du time-to-market en optimisant les manifestes de déploiement des microservices.",
+        "Résultat : déploiement Devops centralisé et configurable, réduction du time-to-market, DB robuste et auto-gouvernée"
+      ],
+      "roles_and_responsibilities": [
+        "Rédaction des plans de reprise d'activité (disaster recovery)",
+        "Configuration du cluster CNPG pour la Point in Time Recovery",
+        "Stratégie de sauvegarde 3-2-1 pour CNPG Postgres",
+        "Migration de Kustomize vers Helm Chart",
+        "Écriture de tests d'intégration pour l'IaC",
+        "Réorganisation et amélioration de l'écosystème de scripts",
+        "Coaching et formation de l'équipe"
+      ],
+      "ecosystem": [
+        "OVH Cloud",
+        "Azure",
+        "Kubernetes",
+        "Architecture microservices"
+      ],
+      "team_size": "4p"
+    },
+    {
+      "start_date": "05-2024",
+      "end_date": "05-2025",
+      "client_name": "Proxym",
+      "role": "Architecte & Auteur",
+      "mission_name": "Agent IA Assistant Produit",
+      "mission_description": [
+        "Auteur, créateur et architecte d'une application générant la page de détails d'un produit pour un système PIM, à partir d'entrées non structurées et multi-modales (texte, PDF, Excel, Word, images).",
+        "Résultat : descriptions de produits générées par IA, robustes et bien gouvernées"
+      ],
+      "roles_and_responsibilities": [
+        "Mise en œuvre d'une chaîne d'outils IA : embedding models, classification, RAG, appels de fonctions LLM et modèles génératifs",
+        "Développement d'un chargeur de prompts intelligent sélectionnant les prompts appropriés selon la classification et le type du produit",
+        "Conception de l'architecture de l'application",
+        "Déploiement et infrastructure sur Azure Container Apps",
+        "Scénarios BDD et automatisation des tests avec Puppeteer",
+        "Prospection commerciale et présentations clients"
+      ],
+      "ecosystem": [
+        "N8N",
+        "LangChain",
+        "Pydantic AI",
+        "LLM",
+        "RAG",
+        "Agents",
+        "Azure",
+        "Container Apps",
+        "Knowledge Graphs",
+        "Puppeteer"
+      ],
+      "team_size": "5p"
+    },
+    {
+      "start_date": "02-2023",
+      "end_date": "05-2024",
+      "client_name": "Qatar Government (Ministry of Health)",
+      "role": "Architecte & Devops",
+      "mission_name": "Symptoms Checker",
+      "mission_description": [
+        "Développement d'une application de santé hybride pour le Ministère de la Santé du Qatar en partenariat avec Infermedica.",
+        "Objectif principal : permettre aux patients d'effectuer un auto-diagnostic assisté par IA avant de consulter un médecin spécialiste.",
+        "Résultat : déploiement réussi de l'application de santé et amélioration de la précision des consultations des patients"
+      ],
+      "roles_and_responsibilities": [
+        "Architecte Applicatif",
+        "Architecte Cloud / DevOps",
+        "Analyse des exigences fonctionnelles avec BDD"
+      ],
+      "ecosystem": [
+        "React Native",
+        "Node.js",
+        "NestJS",
+        "PostgreSQL",
+        "Azure AKS (Kubernetes)",
+        "Azure DevOps (CI/CD)"
+      ],
+      "team_size": "6p"
+    },
+    {
+      "start_date": "10-2022",
+      "end_date": "01-2023",
+      "client_name": "Proxym",
+      "role": "Architecte & Devops",
+      "mission_name": "Bankerise",
+      "mission_description": [
+        "Développement d'un logiciel de banque digitale en marque blanche s'intégrant avec des systèmes bancaires cœur tels que Sopra Banking et Temenos T24. Bankerise permet aux banques d'entrer rapidement dans l'ère de la néobanque avec des services entièrement digitalisés pour l'onboarding, la gestion des bénéficiaires, les virements instantanés.",
+        "Résultat : déploiement réussi de la version corporate de Bankerise pour plusieurs clients en Afrique"
+      ],
+      "roles_and_responsibilities": [
+        "Conception d'une solution bancaire corporate multi-tenant et extensible",
+        "Architecte Applicatif & DevOps",
+        "Consultant sur les bonnes pratiques et la qualité du code/de l'architecture",
+        "Mise en œuvre de l'infrastructure as code (IaC)",
+        "Mise en œuvre de la documentation as code",
+        "Conteneurisation de l'application avec Docker"
+      ],
+      "ecosystem": [
+        "Architecture hexagonale (DDD)",
+        "Module Foundation avec extensions de style SPI",
+        "Module Retail Banking",
+        "CQRS",
+        "Event Driven Architecture",
+        "Java",
+        "Spring",
+        "React",
+        "Docker"
+      ],
+      "team_size": "8p"
+    },
+    {
+      "start_date": "03-2020",
+      "end_date": "10-2021",
+      "client_name": "BforBank",
+      "role": "Architecte & Devops",
+      "mission_name": "Move to Cloud",
+      "mission_description": [
+        "Refonte complète de l'écosystème opérationnel et migration vers Google Cloud Platform",
+        "Mise à niveau de l'écosystème des outils de développement tels que Gitlab, ArgoCD et autres.",
+        "Résultats : déploiement réussi d'une version k8s haute disponibilité de Gitlab, pilotage de toute l'équipe devops d'ansible vers k8s"
+      ],
+      "roles_and_responsibilities": [
+        "Déploiement de l'infrastructure GCP pour Kubernetes avec Terraform",
+        "Installation de GitLab et ArgoCD sur des clusters Kubernetes",
+        "Configuration de Workload Identity, Cert-Manager, et autres opérateurs",
+        "Accompagnement des équipes de développement et mise en œuvre de charts Helm",
+        "Formation et accompagnement des équipes legacy dans leur transition vers le cloud"
+      ],
+      "ecosystem": [
+        "Microservices",
+        "Kafka",
+        "Google Cloud Platform",
+        "Kubernetes",
+        "Helm",
+        "ArgoCD",
+        "Terraform",
+        "Ansible",
+        "Java",
+        "Angular"
+      ],
+      "team_size": "12p"
+    },
+    {
+      "start_date": "03-2020",
+      "end_date": "10-2021",
+      "client_name": "BforBank",
+      "role": "Tech Lead",
+      "mission_name": "Workflow & Outils Qualité",
+      "mission_description": [
+        "Mise en œuvre de SonarQube en tant que produit Tech for Tech",
+        "Développement d'un logiciel de modélisation de systèmes IT d'entreprise C4",
+        "Résultat : l'application a malheureusement été abandonnée avant sa finalisation en raison d'un changement de priorités."
+      ],
+      "roles_and_responsibilities": [
+        "Recueil des besoins auprès des développeurs et Tech Leads",
+        "Création de guides utilisateurs et de documentation",
+        "Installation de SonarQube sur l'infrastructure",
+        "Mise à jour des pipelines CI/CD et ajout de quality gates Sonar",
+        "Organisation d'ateliers Three Amigos (BDD)"
+      ],
+      "ecosystem": [
+        "SonarQube",
+        "GitLab",
+        "Asciidoc (living documentation)",
+        "NestJS",
+        "REST",
+        "Angular",
+        "Cytoscape",
+        "Algorithmes de graphes"
+      ],
+      "team_size": "3p"
+    },
+    {
+      "start_date": "07-2019",
+      "end_date": "03-2020",
+      "client_name": "Transdev",
+      "role": "Architecte & Devops",
+      "mission_name": "Project FDS Next",
+      "mission_description": [
+        "Refonte complète du logiciel de planification et de gestion des conducteurs. Gestion et planification des services des bus et des conducteurs",
+        "Migration vers le cloud - AWS",
+        "Accompagnement dans la mise en place d'un studio de développement"
+      ],
+      "roles_and_responsibilities": [
+        "Définition et mise en œuvre de l'architecture applicative et cloud",
+        "Conception de microservices et de composants serverless",
+        "Organisation et coordination de 15 développeurs répartis sur 3 équipes",
+        "Validation des choix techniques et des décisions d'architecture",
+        "Gestion Devops : ressources cloud, pipelines CI/CD, scripts de déploiement",
+        "Accompagnement des développeurs sur les bonnes pratiques",
+        "Amélioration des processus de développement avec Agile/Scrum",
+        "Promotion du TDD, BDD et des code reviews",
+        "Contribution au développement backend et frontend"
+      ],
+      "ecosystem": [
+        "AWS",
+        "CloudFormation",
+        "Jenkins",
+        "Groovy",
+        "Bash",
+        "AsciiDoc",
+        "Backend : Java 11, Node.js, Spring (Boot, MVC, Data, Security)",
+        "Frontend : Angular 8, TypeScript, HTML5, CSS3"
+      ],
+      "team_size": "15p"
+    },
+    {
+      "start_date": "07-2018",
+      "end_date": "07-2019",
+      "client_name": "Teréga",
+      "role": "Architecte & Devops",
+      "mission_name": "STAR Portal",
+      "mission_description": [
+        "Portail des parties prenantes avec enchères pour le stockage/transport de gaz et des dashboards.",
+        "Contraintes d'enchères en temps réel, développé entièrement avec des fonctions lambda, architecture microservices sur AWS",
+        "Résultat : reprise, sauvetage et transformation en succès d'un projet en échec issu d'un précédent cabinet de conseil"
+      ],
+      "roles_and_responsibilities": [
+        "Reprise et pilotage du projet",
+        "Pipeline DevOps et mise en place du serverless",
+        "Améliorations architecturales",
+        "Développement full-stack",
+        "Coaching des développeurs et amélioration des processus",
+        "Garantie du TDD, BDD et des code reviews"
+      ],
+      "ecosystem": [
+        "AWS Serverless : API Gateway, SNS, SQS",
+        "S3 + événements Lambda pour l'import de données",
+        "Bitbucket Pipelines",
+        "Terraform",
+        "Bash",
+        "Backend : Node.js, TypeScript, Lambda",
+        "Frontend : Angular 6, HTML5, CSS3"
+      ],
+      "team_size": "15p"
+    },
+    {
+      "start_date": "04-2018",
+      "end_date": "07-2018",
+      "client_name": "Pointp (Saint-Gobain), Air Liquide (Aries), Pernod Ricard",
+      "role": "Lead Technique & Devops",
+      "mission_name": "Petits Projets au Forfait",
+      "mission_description": [
+        "Réalisation de plusieurs projets courts au forfait : application mobile de scan de codes-barres, système de gestion de tâches sur AWS, et redirection d'URL avec Lambda@Edge.",
+        "PointP : application hybride pour scanner des codes-barres, consulter les fiches produits, créer une liste de souhaits",
+        "Aries (Air Liquide) : gestion de tâches avec AWS Lambda, API Gateway, Cognito",
+        "Pernod Ricard : redirection d'URL courtes avec AWS Lambda@Edge"
+      ],
+      "roles_and_responsibilities": [
+        "Développement full stack",
+        "Création de pipelines CI/CD et d'architectures serverless",
+        "Analyse des besoins métier",
+        "Communication directe avec les parties prenantes",
+        "Pratiques Agile, TDD/BDD, code reviews"
+      ],
+      "ecosystem": [
+        "AWS",
+        "GCP",
+        "Cordova",
+        "Angular 6",
+        "Java",
+        "Node.js"
+      ],
+      "team_size": "~3p"
+    },
+    {
+      "start_date": "04-2017",
+      "end_date": "04-2018",
+      "client_name": "Priceminister (Rakuten)",
+      "role": "Développeur & SCRUM",
+      "mission_name": "Rakuten Ads",
+      "mission_description": [
+        "Conception et développement d'un système de gestion de publicités payantes \"Rakuten Ads\" (facturation au clic/à l'impression, statistiques, mise à jour automatique des publicités)",
+        "Refonte du parcours d'inscription utilisateur",
+        "Mise en œuvre de tests BDD avec Cucumber",
+        "Animation des cérémonies d'équipe et des sessions BBL"
+      ],
+      "roles_and_responsibilities": [
+        "Développement de fonctionnalités et refactoring",
+        "Animation Agile/Scrum",
+        "Mise à niveau et amélioration du code legacy",
+        "Automatisation de tests BDD avec Cucumber"
+      ],
+      "ecosystem": [
+        "Cucumber",
+        "Agile",
+        "Scrum",
+        "Java 8",
+        "Spring"
+      ],
+      "team_size": "6p"
+    },
+    {
+      "start_date": "01-2017",
+      "end_date": "04-2017",
+      "client_name": "AXA Assurances",
+      "role": "Tech Lead",
+      "mission_name": "FICOVIE Golden Record",
+      "mission_description": [
+        "Amélioration de la fiabilité par la consolidation de plusieurs sources de données",
+        "Permettre aux utilisateurs de vérifier et mettre à jour le Golden Record en un clic"
+      ],
+      "roles_and_responsibilities": [
+        "Conception des modèles de données",
+        "Optimisation des performances des requêtes",
+        "Assistance à la mise en place du serveur d'application",
+        "Développement backend avec Spring Boot",
+        "Traitement batch avec Spring Batch",
+        "Pratique du TDD tout au long du projet"
+      ],
+      "ecosystem": [
+        "Java",
+        "Spring Boot",
+        "Spring Batch",
+        "Angular 2"
+      ],
+      "team_size": "3p"
+    },
+    {
+      "start_date": "03-2016",
+      "end_date": "01-2017",
+      "client_name": "BforBank",
+      "role": "Développeur",
+      "mission_name": "Réinitialisation du Code Secret",
+      "mission_description": [
+        "Mise en place de la réinitialisation du code PIN par SMS avec double vérification d'identité pour les clients de la banque",
+        "Migration du socle technique et amélioration de la couche de présentation",
+        "Autres améliorations et refactoring de code liés au CRM et à l'Espace Client"
+      ],
+      "roles_and_responsibilities": [
+        "Développement backend",
+        "Développement et maintenance d'APIs REST",
+        "Garantie de la qualité du code via les reviews et les pull requests",
+        "Amélioration des processus Gitflow"
+      ],
+      "ecosystem": [
+        "Java 8",
+        "Spring Boot",
+        "Thymeleaf",
+        "jQuery",
+        "Oracle DB"
+      ],
+      "team_size": "5p"
+    },
+    {
+      "start_date": "03-2015",
+      "end_date": "03-2016",
+      "client_name": "GMF",
+      "role": "Développeur",
+      "mission_name": "Maintenance Notes de Frais & Gestion de Stock",
+      "mission_description": [
+        "Gestion du workflow d'approbation et des notifications pour les notes de frais",
+        "Développement d'un logiciel de gestion de stock et de traitements batch pour toutes les agences françaises",
+        "Intégration avec KIMOCE"
+      ],
+      "roles_and_responsibilities": [
+        "Développement et maintenance backend",
+        "Correction de bugs et optimisation des performances",
+        "Analyse de logs et requêtes avancées"
+      ],
+      "ecosystem": [
+        "JSF",
+        "DB2",
+        "WebSphere",
+        "PLSQL",
+        "Java batch"
+      ],
+      "team_size": "4p"
+    },
+    {
+      "start_date": "08-2013",
+      "end_date": "03-2015",
+      "client_name": "AG2R LA MONDIALE",
+      "role": "Développeur",
+      "mission_name": "Maintenance d'Applications Tierces",
+      "mission_description": [
+        "Coordination et synchronisation des mises en production",
+        "Gestion du backlog de bugs et d'incidents"
+      ],
+      "roles_and_responsibilities": [
+        "Maintenance et évolution",
+        "Coordination des mises en production",
+        "Gestion du backlog",
+        "Améliorations de code"
+      ],
+      "ecosystem": [
+        "Jahia 6.1",
+        "Jahia 6.6",
+        "Java",
+        "Spring",
+        "JSP",
+        "JSF",
+        "MySQL",
+        "Linux",
+        "Tomcat",
+        "Apache"
+      ],
+      "team_size": "3p"
+    },
+    {
+      "start_date": "02-2012",
+      "end_date": "06-2013",
+      "client_name": "Boursorama Bank",
+      "role": "Développeur Junior",
+      "mission_name": "Gestion de la Relation Client / Programme de Parrainage",
+      "mission_description": [
+        "Travail sur la plateforme CRM pour les opérations en ligne",
+        "Mise en œuvre du programme de parrainage client avec gestion de l'éligibilité"
+      ],
+      "roles_and_responsibilities": [
+        "Développement web app avec Spring MVC, Struts, Hibernate (Criteria API), jQuery",
+        "Travail avec Oracle DB et PL/SQL",
+        "Garantie de la qualité via JUnit, Selenium, et l'intégration continue"
+      ],
+      "ecosystem": [
+        "Spring MVC",
+        "Struts",
+        "Hibernate (Criteria API)",
+        "jQuery",
+        "Oracle",
+        "PL/SQL",
+        "JUnit",
+        "Selenium",
+        "CI",
+        "SVN"
+      ],
+      "team_size": "8p"
+    }
+  ]
+}

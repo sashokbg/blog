@@ -2,13 +2,21 @@
     --cv-bg: #f7fafc;
     --cv-surface: #ffffff;
     display: block;
-    font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font: 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     color: #0f172a;
+}
+
+cv-first-page {
+    break-after: page;
+}
+
+cv-section[title="Experiences"] {
+    break-before: page;
 }
 
 .page {
     background: var(--cv-bg);
-    padding: 1rem;
+    padding: .75rem;
 }
 
 .actions {
@@ -63,31 +71,7 @@
     max-width: 980px;
     margin: 0 auto;
     display: grid;
-    gap: 1rem;
-}
-
-cv-header {
-    grid-column: 1 / -1;
-}
-
-.columns {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 1rem;
-    align-items: start;
-}
-
-/* Make the experiences section span both columns so its left meta
-   aligns with the sidebar column */
-.columns > cv-section {
-    grid-column: 1 / -1;
-}
-
-cv-sidebar, cv-main {
-    background: var(--cv-surface);
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1rem;
+    gap: .75rem;
 }
 
 @media print {
@@ -98,7 +82,7 @@ cv-sidebar, cv-main {
 
 @page {
     size: A4 portrait;
-    margin: 20mm;
+    margin: 10mm;
 }
 
 body {

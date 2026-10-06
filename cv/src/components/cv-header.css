@@ -3,7 +3,7 @@
     background: var(--cv-header-bg, #0f172a);
     color: #f8fafc;
     border-radius: 12px;
-    padding: 1rem 1.25rem;
+    padding: .75rem 1rem;
 }
 
 .row {

@@ -77,13 +77,13 @@ class CVExperiences extends HTMLElement {
           <div class="row">
             <aside class="meta">
               <div class="role">${it.role}</div>
+              <div class="client">${it.client_name}</div>
               <div class="period">${this._fmtPeriod(it.start_date, it.end_date)}</div>
               ${this._fmtDuration(it.start_date, it.end_date) ? `<div class="duration">${this._fmtDuration(it.start_date, it.end_date)}</div>` : ''}
               ${it.team_size ? `<div class="team">Team: ${it.team_size}</div>` : ''}
             </aside>
             <div class="content">
               ${it.mission_name ? `<h3 class="mission">${it.mission_name}</h3>` : ''}
-              <div class="client">${it.client_name}</div>
               ${this._paragraphs(it.mission_description)}
               <strong>Roles & responsibilities</strong>
               ${this._list(it.roles_and_responsibilities)}

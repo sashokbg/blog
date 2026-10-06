@@ -151,9 +151,6 @@
         },
         "role": {
           "type": "string"
-        },
-        "client": {
-          "type": "string"
         }
       }
     },

@@ -24,7 +24,7 @@ class CVSkills extends HTMLElement {
         <div class="items">${(g.items || []).map(i => `<span class="chip">${i}</span>`).join('')}</div>
       </div>
     `).join('');
-    this.shadowRoot.innerHTML = `${groups}`;
+    this.shadowRoot.innerHTML = `<div class="grid">${groups}</div>`;
 
     applyStyles(this);
   }

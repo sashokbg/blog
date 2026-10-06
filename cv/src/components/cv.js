@@ -1,7 +1,5 @@
 // Keep root minimal; import child components so they are registered
-import './cv-header.js';
-import './cv-sidebar.js';
-import './cv-main.js';
+import './cv-first-page.js';
 import './cv-section.js';
 import './cv-experiences.js';
 import {applyStyles} from "./tools.js";
@@ -17,12 +15,13 @@ class CV extends HTMLElement {
   }
 
   connectedCallback() {
+    document.documentElement.lang = this._currentLang();
     this._renderShell();
     this._loadAndRender();
   }
 
   async _loadAndRender() {
-    const src = this.getAttribute('data-load-data');
+    const src = this._resolveDataSrc();
     if (!src) return;
     try {
       const res = await fetch(src, {cache: 'no-store'});
@@ -45,17 +44,14 @@ class CV extends HTMLElement {
     this.shadowRoot.innerHTML += `
       <div class="page">
         <div class="actions">
+          <button type="button" data-action="lang-toggle">${this._currentLang() === 'fr' ? '🇬🇧 English' : '🇫🇷 Français'}</button>
           <button type="button" data-action="page-breaks" aria-pressed="false">Show Page Breaks</button>
           <button type="button" data-action="download">Download CV</button>
           <span class="status" data-role="status" hidden></span>
         </div>
         <div class="container">
-          <cv-header></cv-header>
-          <div class="columns">
-            <cv-sidebar></cv-sidebar>
-            <cv-main></cv-main>
-            <cv-section title="Experiences"><cv-experiences></cv-experiences></cv-section>
-          </div>
+          <cv-first-page class="first-page"></cv-first-page>
+          <cv-section title="Experiences"><cv-experiences></cv-experiences></cv-section>
         </div>
       </div>
     `;
@@ -65,14 +61,10 @@ class CV extends HTMLElement {
   }
 
   _bindData(data) {
-    const header = this.shadowRoot.querySelector('cv-header');
-    const sidebar = this.shadowRoot.querySelector('cv-sidebar');
-    const main = this.shadowRoot.querySelector('cv-main');
+    const firstPage = this.shadowRoot.querySelector('cv-first-page');
     const exps = this.shadowRoot.querySelector('cv-experiences');
     this._data = data;
-    header.data = data.identity;
-    sidebar.data = data.identity;
-    main.data = data;
+    if (firstPage) firstPage.data = data;
     if (exps) exps.data = data.experiences || [];
     if (this._pageBreakOverlay) {
       requestAnimationFrame(() => this._drawPageBreakLines());
@@ -96,20 +88,51 @@ class CV extends HTMLElement {
     if (this._pageBreaksBtn) {
       this._pageBreaksBtn.removeEventListener('click', this._onTogglePageBreaks);
     }
+    if (this._langBtn) {
+      this._langBtn.removeEventListener('click', this._onToggleLang);
+    }
     this._downloadBtn = this.shadowRoot.querySelector('[data-action="download"]');
     this._pageBreaksBtn = this.shadowRoot.querySelector('[data-action="page-breaks"]');
+    this._langBtn = this.shadowRoot.querySelector('[data-action="lang-toggle"]');
     this._statusEl = this.shadowRoot.querySelector('[data-role="status"]');
     this._onDownload = () => this._downloadCV();
     this._onTogglePageBreaks = () => this._togglePageBreaks();
+    this._onToggleLang = () => this._toggleLanguage();
     if (this._downloadBtn) {
       this._downloadBtn.addEventListener('click', this._onDownload);
     }
     if (this._pageBreaksBtn) {
       this._pageBreaksBtn.addEventListener('click', this._onTogglePageBreaks);
     }
+    if (this._langBtn) {
+      this._langBtn.addEventListener('click', this._onToggleLang);
+    }
   }
 
-  // Mirrors the @page rule in index.html (A4, 12mm margins) so the
+  // Language is driven by a `lang` URL query param so switching triggers a
+  // real page reload (fresh fetch of the French/English data file).
+  _currentLang() {
+    return new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'en';
+  }
+
+  _resolveDataSrc() {
+    const base = this.getAttribute('data-load-data');
+    if (!base) return base;
+    return this._currentLang() === 'fr' ? base.replace(/\.json$/i, '-fr.json') : base;
+  }
+
+  _toggleLanguage() {
+    const nextLang = this._currentLang() === 'fr' ? 'en' : 'fr';
+    const url = new URL(window.location.href);
+    if (nextLang === 'fr') {
+      url.searchParams.set('lang', 'fr');
+    } else {
+      url.searchParams.delete('lang');
+    }
+    window.location.href = url.toString();
+  }
+
+  // Mirrors the @page rule in index.html (A4, 10mm margins) so the
   // overlay lines land where the browser will actually cut the page.
   _togglePageBreaks() {
     if (this._pageBreakOverlay) {
@@ -162,7 +185,7 @@ class CV extends HTMLElement {
 
     const PX_PER_MM = 96 / 25.4;
     const PAGE_HEIGHT_MM = 297;
-    const PAGE_MARGIN_MM = 12;
+    const PAGE_MARGIN_MM = 10;
     const pageHeightPx = (PAGE_HEIGHT_MM - PAGE_MARGIN_MM * 2) * PX_PER_MM;
 
     const bodyRect = document.body.getBoundingClientRect();
@@ -199,7 +222,7 @@ class CV extends HTMLElement {
 
   async _ensureData() {
     if (this._data) return this._data;
-    const src = this.getAttribute('data-load-data');
+    const src = this._resolveDataSrc();
     if (!src) throw new Error('Missing data source');
     const res = await fetch(src, {cache: 'no-store'});
     if (!res.ok) throw new Error(`Failed to load data: ${res.status}`);
@@ -261,6 +284,7 @@ class CV extends HTMLElement {
   async _collectStyles() {
     const files = [
       ['cv.css', 'cv-root'],
+      ['cv-first-page.css', 'cv-first-page'],
       ['cv-header.css', 'cv-header'],
       ['cv-sidebar.css', 'cv-sidebar'],
       ['cv-main.css', 'cv-main'],
@@ -336,12 +360,14 @@ class CV extends HTMLElement {
   <body>
     <div class="cv-root page">
       <div class="container">
-        ${this._renderHeader(identity)}
-        <div class="columns">
-          ${this._renderSidebar(identity)}
-          ${this._renderMain(identity, skills, timeline)}
-          ${this._renderExperiences(experiences)}
+        <div class="cv-first-page">
+          ${this._renderHeader(identity)}
+          <div class="columns">
+            ${this._renderSidebar(identity, timeline)}
+            ${this._renderMain(identity, skills)}
+          </div>
         </div>
+        ${this._renderExperiences(experiences)}
       </div>
     </div>
   </body>
@@ -385,7 +411,7 @@ class CV extends HTMLElement {
     return `<span class="chip"><a href="${this._escapeAttr(link.link)}" target="_blank" rel="noopener">${ico}${this._escapeHtml(hostname)}</a></span>`;
   }
 
-  _renderSidebar(identity) {
+  _renderSidebar(identity, timeline) {
     const renderList = (arr) => Array.isArray(arr) && arr.length
       ? `<ul>${arr.map(item => `<li>${this._escapeHtml(item)}</li>`).join('')}</ul>`
       : '<ul></ul>';
@@ -393,16 +419,25 @@ class CV extends HTMLElement {
       ? `<ul>${arr.map(item => `<li>${this._escapeHtml(item.language)} — ${this._escapeHtml(item.level)}</li>`).join('')}</ul>`
       : '<ul></ul>';
 
+    const timelineItems = (timeline || [])
+      .slice()
+      .sort((a, b) => (b.year || 0) - (a.year || 0))
+      .map(item => `<li class="item">
+        <span class="year">${this._escapeHtml(item.year)}</span>
+        <span class="role">${this._escapeHtml(item.role)}</span>
+      </li>`).join('');
+
     return `<cv-sidebar class="cv-sidebar">
       ${this._renderSection('Education', renderList(identity?.education))}
       ${this._renderSection('Trainings', renderList(identity?.trainings))}
+      ${this._renderSection('Career Timeline', `<div class="cv-timeline"><ul class="tl">${timelineItems}</ul></div>`)}
       ${this._renderSection('Personal Projects', renderList(identity?.personal_projects))}
       ${this._renderSection('Languages', renderLanguages(identity?.languages))}
       ${this._renderSection('Hobbies', renderList(identity?.hobbies))}
     </cv-sidebar>`;
   }
 
-  _renderMain(identity, skills, timeline) {
+  _renderMain(identity, skills) {
     const about = identity?.about || [];
     const aboutHtml = Array.isArray(about)
       ? about.map(line => `<p>${this._escapeHtml(line)}</p>`).join('')
@@ -415,27 +450,9 @@ class CV extends HTMLElement {
       </div>
     `).join('');
 
-    const timelineItems = timeline
-      .slice()
-      .sort((a, b) => (b.year || 0) - (a.year || 0))
-      .map(item => {
-        const clients = typeof item.client === 'string'
-          ? item.client.split(/,\s*/).filter(Boolean).map(part => this._escapeHtml(part)).join('<br>')
-          : '';
-        return `<div class="item" role="listitem">
-          <div class="year">${this._escapeHtml(item.year)}</div>
-          <div class="mark" aria-hidden="true">
-            <div class="dot"></div>
-          </div>
-          <div class="role">${this._escapeHtml(item.role)}</div>
-          <div class="client">${clients}</div>
-        </div>`;
-      }).join('');
-
     return `<cv-main class="cv-main">
       ${this._renderSection('About', `<div class="cv-about">${aboutHtml}</div>`)}
-      ${this._renderSection('Skills', `<div class="cv-skills">${skillsHtml}</div>`)}
-      ${this._renderSection('Timeline', `<div class="cv-timeline"><div class="tl" role="list">${timelineItems}</div></div>`)}
+      ${this._renderSection('Skills', `<div class="cv-skills"><div class="grid">${skillsHtml}</div></div>`)}
     </cv-main>`;
   }
 
@@ -477,6 +494,7 @@ class CV extends HTMLElement {
   }
 
   _renderSection(title, body) {
+    console.log("Rendering section", title);
     return `<cv-section class="cv-section">
       <h2>${this._escapeHtml(title)}</h2>
       <div class="card">${body}</div>

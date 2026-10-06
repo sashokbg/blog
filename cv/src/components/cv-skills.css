@@ -2,26 +2,34 @@
     display: block;
 }
 
+.grid {
+    column-count: 2;
+    column-gap: .75rem;
+}
+
 .group {
-    margin-bottom: .75rem;
+    margin-bottom: .45rem;
+    break-inside: avoid;
 }
 
 .cat {
     font-weight: 600;
-    margin-bottom: .25rem;
+    margin-bottom: .2rem;
+    font-size: .85rem;
 }
 
 .items {
     display: flex;
     flex-wrap: wrap;
-    gap: .35rem;
+    gap: .25rem;
 }
 
 .chip {
     background: #eef2ff;
     color: #3730a3;
     border: 1px solid #c7d2fe;
-    padding: .15rem .45rem;
+    padding: .1rem .35rem;
     border-radius: 999px;
-    font-size: .75rem;
+    font-size: .68rem;
+    line-height: 1.3;
 }

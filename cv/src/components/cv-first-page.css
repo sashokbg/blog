@@ -1,0 +1,22 @@
+:host {
+    display: block;
+}
+
+cv-header {
+    display: block;
+    margin-bottom: .75rem;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: .75rem;
+    align-items: start;
+}
+
+cv-sidebar, cv-main {
+    background: var(--cv-surface, #fff);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: .75rem;
+}

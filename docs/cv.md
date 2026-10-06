@@ -10,15 +10,15 @@ title: Aleksandar Kirilov
 
 :fontawesome-regular-user: Aleksandar Kirilov
 
-:material-briefcase-outline: Architect
+:material-briefcase-outline: Software Architect
 
-:material-calendar-clock: 14 years of experience
+:material-calendar-clock: 15 years of experience
 
 :material-email-outline:  [Contact](contact.md)
 
 </div>
 
-Passionate about Informatics and Technologies with 14 years of team experience in major companies such as Transdev, Terega, Boursorama, AG2R La Mondiale, GMF, AXA, Priceminister, BforBank, and others.
+Passionate about Informatics and Technologies with 15 years of team experience in major companies such as Transdev, Terega, Boursorama, AG2R La Mondiale, GMF, AXA, Priceminister, BforBank, and others.
 
 I am able to lead a project from design to production by implementing a technical solution tailored to the client's situation and constraints.
 
@@ -69,11 +69,11 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
 <div class="grid cards" markdown>
 -   **Devops & Cloud**
 
-    `GCP` · `AWS` · `Azure` · `Cloud Native (Kubernetes / Docker)` · `Cloudformation` · `Terraform` · `Ansible` · `ArgoCD` · `Helm`
+    `GCP` · `AWS` · `Azure` · `Cloud Native (Kubernetes / Docker)` · `Cloudformation` · `Terraform / Open Tofu` · `Ansible` · `ArgoCD` · `Helm`
 
 -   **Programming Languages**
 
-    `Java 21/JEE` · `Javascript` · `Typescript` · `Python` · `Shell`
+    `Java 21/JEE` · `Javascript` · `Rust` · `Typescript` · `Python` · `Shell`
 
 -   **AI**
 
@@ -85,7 +85,7 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
 
 -   **Databases**
 
-    `PostgreSQL` · `MySQL` · `Oracle` · `DynamoDB` · `H2`
+    `PostgreSQL` · `MySQL / Mariadb` · `Oracle` · `DynamoDB` · `H2`
 
 -   **Infra & Tools**
 
@@ -100,30 +100,103 @@ Positive, patient, and pedagogical, enjoying both sharing and explaining, as wel
 ### Timeline
 
 <div class="grid cards" markdown>
-- | Year | Role / Client |
-  | ---- | -------------- |
-  | 2025 | Senior Devops - Egis Group |
-  | 2024 | Architect / AI - Proxym AI Tools |
-  | 2023 | Architect / Devops - Qatar Government |
-  | 2022 | Architect - Bankerise, Proxym |
-  | 2020 | Architect / Devops - BforBank |
-  | 2019 | Tech Lead / Devops - Pernod Ricard, Point P, Air Liquide |
-  | 2019 | Architect / Devops - Teréga |
+- | Year | Role |
+  | ---- | ---- |
+  | 2025 | CTO / Head of IT |
+  | 2024 | Architect AI |
+  | 2023 | Architect Devops |
+  | 2019 | Devops |
+  | 2019 | Architect |
 
-- | Year | Role / Client |
-  | ---- | -------------- |
-  | 2019 | Architect / Devops - Transdev |
-  | 2018 | Lead Back - Priceminister / Rakuten |
-  | 2017 | Tech Lead - AXA |
-  | 2016 | Developer - BforBank |
-  | 2015 | Developer - GMF |
-  | 2013 | Junior Developer - AG2R La Mondiale |
-  | 2012 | Junior Developer - Boursorama Banque |
+- | Year | Role |
+  | ---- | ---- |
+  | 2018 | Tech Lead |
+  | 2017 | Lead Back |
+  | 2015 | Developer |
+  | 2012 | Junior Developer |
 </div>
 
 
 ## Work Experience
   
+
+### Data Engineer · EGIS Group
+
+
+
+:material-briefcase: **Mission:** DB Performance Improvements
+
+
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** May 2026 - Jun 2026 (2 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 2p</span>
+
+</div>
+
+**Description**
+
+
+EGIS digital parking solution offers a BI Dashboard for their clients
+
+The Dashboards are based upon a Data Warehouse, created using a Postgres relational database
+
+The DW suffers from performance issues due to the large size of ingested data and the complexity of certain projections
+
+
+**Roles & responsibilities**
+
+Analyse the database schema, queries and stored procedures for potential design and performance issues
+  Propose an improvement plan, based on the existing architecture and technical constraints
+  Write and execute stress tests for each use-case
+
+
+:material-cog-outline: **Ecosystem**
+
+`SQL Server 2019` · `MSSQL Extended Events (previously) Profiler` · `.NET`
+
+---
+
+
+### Database Analyst · Phoenix Fleet Management
+
+
+
+:material-briefcase: **Mission:** DB Performance Improvements
+
+
+<div markdown style="display: flex; justify-content: space-between">
+
+  <span markdown>:material-calendar: **When:** Jan 2026 - May 2026 (5 mos)</span>
+
+  <span markdown>:material-account-group-outline: **Team size:** 4p</span>
+
+</div>
+
+**Description**
+
+
+Analyse and determine origins of performance issues for an on-prem MSSQL 2019 DB
+
+Prepare and present performance reports, based on stress tests
+
+Study the possibility of using AI to further improve the DB performance and speed up deployment
+
+
+**Roles & responsibilities**
+
+Analyse the database schema, queries and stored procedures for potential design and performance issues
+  Propose an improvement plan, based on the existing architecture and technical constraints
+  Write and execute stress tests for each use-case
+
+
+:material-cog-outline: **Ecosystem**
+
+`SQL Server 2019` · `MSSQL Extended Events (previously) Profiler` · `.NET`
+
+---
+
 
 ### Senior Devops · Egis Group
 
@@ -425,17 +498,7 @@ Defined and implemented application and cloud architecture
 
 Stakeholder portal with auctions for gas storage/transport and dashboards.
 
-Took over and revived a failed project
-
-Managed DevOps: serverless architecture, CI/CD with Bitbucket, build scripts
-
-Improved the existing architecture
-
-Contributed to backend and frontend
-
-Guided developers; improved Agile/Scrum process
-
-Ensured TDD, BDD, and code reviews
+Real-time auction constraints, developed fully using lambda functions Microservices architecture on AWS
 
 
 **Roles & responsibilities**

@@ -1,10 +1,11 @@
 import './cv-section.js';
+import './cv-timeline.js';
 import {applyStyles} from "./tools.js";
 
-// Sidebar: education, trainings, personal projects, languages, hobbies
+// Sidebar: education, trainings, career timeline, personal projects, languages, hobbies
 class CVSidebar extends HTMLElement {
-  set data(identity) {
-    this._data = identity || {};
+  set data(payload) {
+    this._data = payload || {};
     this._render();
   }
 
@@ -27,14 +28,17 @@ class CVSidebar extends HTMLElement {
 
   _render() {
     if (!this.shadowRoot) return;
-    const d = this._data || {};
+    const payload = this._data || {};
+    const d = payload.identity || {};
     this.shadowRoot.innerHTML = `
       <cv-section title="Education">${this._renderList(d.education)}</cv-section>
       <cv-section title="Trainings">${this._renderList(d.trainings)}</cv-section>
+      <cv-section title="Career Timeline"><cv-timeline></cv-timeline></cv-section>
       <cv-section title="Personal Projects">${this._renderList(d.personal_projects)}</cv-section>
       <cv-section title="Languages">${this._renderLanguages(d.languages)}</cv-section>
       <cv-section title="Hobbies">${this._renderList(d.hobbies)}</cv-section>
     `;
+    this.shadowRoot.querySelector('cv-timeline').data = payload.timeline || [];
 
     applyStyles(this);
   }
